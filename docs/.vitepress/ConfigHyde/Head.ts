@@ -55,6 +55,8 @@ export const HeadData = [
     },
   ],
   ["meta", { name: "keywords", description }],
+  // 明确声明字符编码为 UTF-8，确保 emoji 显示
+  ["meta", { charset: "UTF-8", "http-equiv": "Content-Type" }],
   ["meta", { name: "baidu-site-verification", content: "codeva-QnY1Xh758j" }], // 百度收录
   [
     "meta",
