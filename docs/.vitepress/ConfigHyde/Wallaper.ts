@@ -3,7 +3,6 @@
 // 壁纸服务配置 - 统一配置服务地址，一处修改全局生效
 export const WALLPAPER_SERVICE_CONFIG = {
   baseUrl: 'https://imgapi.onedayxyy.cn',
-  // baseUrl: 'https://imgapi.onedayxyy.cn',
   apiEndpoint: '/api/images',
   get fullUrl() {
     return `${this.baseUrl}${this.apiEndpoint}`
@@ -12,8 +11,38 @@ export const WALLPAPER_SERVICE_CONFIG = {
 
 // 备用图片列表（当本地服务不可用时使用）
 const fallbackImages = [
-  "https://img.onedayxyy.cn/images/Teek/TeekBg/1.webp", 
-  // "https://img.onedayxyy.cn/images/Teek/TeekBg/2.webp", 
+  "/Website/bizhi/1.webp",
+  "/Website/bizhi/2.webp",
+  "/Website/bizhi/3.webp",
+  "/Website/bizhi/4.webp",
+  "/Website/bizhi/5.webp",
+  "/Website/bizhi/6.webp",
+  "/Website/bizhi/7.webp",
+  "/Website/bizhi/8.webp",
+  "/Website/bizhi/9.webp",
+  "/Website/bizhi/10.webp",
+  "/Website/bizhi/11.webp",
+  "/Website/bizhi/12.webp",
+  "/Website/bizhi/13.webp",
+  "/Website/bizhi/14.webp",
+  "/Website/bizhi/15.webp",
+  "/Website/bizhi/16.webp",
+  "/Website/bizhi/17.webp",
+  "/Website/bizhi/18.webp",
+  "/Website/bizhi/19.webp",
+  "/Website/bizhi/20.webp",
+  "/Website/bizhi/21.webp",
+  "/Website/bizhi/22.webp",
+  "/Website/bizhi/23.webp",
+  "/Website/bizhi/24.webp",
+  "/Website/bizhi/25.webp",
+  "/Website/bizhi/26.webp",
+  "/Website/bizhi/27.webp",
+  "/Website/bizhi/28.webp",
+  "/Website/bizhi/29.webp",
+  "/Website/bizhi/30.webp",
+  // "https://img.onedayxyy.cn/images/Teek/TeekBg/1.webp",
+  // "https://img.onedayxyy.cn/images/Teek/TeekBg/2.webp",
   // "https://img.onedayxyy.cn/images/Teek/TeekBg/3.webp", 
   // "https://img.onedayxyy.cn/images/Teek/TeekBg/4.webp", 
   // "https://img.onedayxyy.cn/images/Teek/TeekBg/5.webp", 
@@ -34,32 +63,33 @@ const fallbackImages = [
 ];
 // 动态获取图片列表的函数
 async function fetchDynamicWallpapers(): Promise<string[]> {
-  try {
-    // 使用统一配置的图片服务API
-    const response = await fetch(WALLPAPER_SERVICE_CONFIG.fullUrl, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-      },
-    });
-    
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-    }
-    
-    const data = await response.json();
-    const images = data.images || [];
-    
-    // 将相对路径转换为完整的服务器URL
-    const wallpapers = images.map((imagePath: string) => `${WALLPAPER_SERVICE_CONFIG.baseUrl}${imagePath}`);
-    
-    // 如果获取到图片，返回动态图片列表，否则返回备用图片
-    return wallpapers.length > 0 ? wallpapers : wallpapers;
-    
-  } catch (error) {
-    console.warn('无法获取动态壁纸，使用备用图片:', error);
-    return fallbackImages;
-  }
+  // try {
+  //   // 使用统一配置的图片服务API
+  //   const response = await fetch(WALLPAPER_SERVICE_CONFIG.fullUrl, {
+  //     method: 'GET',
+  //     headers: {
+  //       'Accept': 'application/json',
+  //     },
+  //   });
+  //
+  //   if (!response.ok) {
+  //     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+  //   }
+  //
+  //   const data = await response.json();
+  //   const images = data.images || [];
+  //
+  //   // 将相对路径转换为完整的服务器URL
+  //   const wallpapers = images.map((imagePath: string) => `${WALLPAPER_SERVICE_CONFIG.baseUrl}${imagePath}`);
+  //
+  //   // 如果获取到图片，返回动态图片列表，否则返回备用图片
+  //   return wallpapers.length > 0 ? wallpapers : wallpapers;
+  //
+  // } catch (error) {
+  //   console.warn('无法获取动态壁纸，使用备用图片:', error);
+  //   return fallbackImages;
+  // }
+  return fallbackImages;
 }
 
 // 创建一个Promise来获取壁纸
