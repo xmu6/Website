@@ -341,7 +341,7 @@ export default defineConfig({
   }),
   base: "/Website/",
   extends: teekConfig,
-  title: "One", //左上角网站名称
+  title: "Maolin Xiao", //左上角网站名称
   description: description,
   cleanUrls: true,  //设置为true就是让链接后不默认添加.html
   lastUpdated: true,

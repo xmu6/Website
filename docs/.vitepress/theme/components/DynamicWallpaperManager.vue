@@ -6,15 +6,26 @@
 import { onMounted, onUnmounted, nextTick, watch } from 'vue'
 import { useRoute } from 'vitepress'
 import { fetchDynamicWallpapers, WALLPAPER_SERVICE_CONFIG } from '../../ConfigHyde/Wallaper'
+import { useData } from 'vitepress'
 
 // 路由检测 - 只在首页启用动态壁纸
 const route = useRoute()
+const { frontmatter } = useData()
 let isHomePage = false
 
-// 检查是否为首页
+// 检查是否为首页（兼容 base 路径）
 function checkIsHomePage(): boolean {
+  // 方法1：通过 frontmatter 判断（最可靠）
+  const isHomeLayout = frontmatter.value?.layout === 'home'
+  
+  // 方法2：通过路由路径判断（兼容 base 路径）
   const path = route.path
-  return path === '/' || path === '/index.html' || path === ''
+  const pathName = window.location.pathname
+  const isRootPath = path === '/' || path === '/index.html' || path === '' || path.endsWith('/index.html')
+  const isHomePagePath = pathName === '/' || pathName.endsWith('/Website/') || pathName.endsWith('/Website/index.html')
+  
+  // 优先使用 frontmatter 判断，其次使用路径判断
+  return isHomeLayout || isRootPath || isHomePagePath
 }
 
 // 停止所有动态壁纸相关功能
