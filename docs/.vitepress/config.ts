@@ -339,7 +339,7 @@ export default defineConfig({
   rewrites: createRewrites({
     srcDir: 'docs',
   }),
-
+  base: "/Website/",
   extends: teekConfig,
   title: "One", //左上角网站名称
   description: description,
