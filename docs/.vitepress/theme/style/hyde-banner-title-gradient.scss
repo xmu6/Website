@@ -1,0 +1,21 @@
+// 首页标题描边文字效果
+.tk-banner-content__title {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    // 使用 text-shadow 实现黑色描边效果
+    text-shadow:
+        -2px -2px 0 #000000,
+        2px -2px 0 #000000,
+        -2px 2px 0 #000000,
+        2px 2px 0 #000000,
+        -2px 0 0 #000000,
+        2px 0 0 #000000,
+        0 -2px 0 #000000,
+        0 2px 0 #000000,
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px 1px 0 #000000;
+}
+
