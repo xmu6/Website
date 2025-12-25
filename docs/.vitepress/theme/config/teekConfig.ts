@@ -7,6 +7,11 @@ import { Wallpaper } from "../../ConfigHyde/Wallaper"; // 导入Wallaper模块
 import { Cover } from "../../ConfigHyde/Cover"; // 导入Wallaper模块
 import { SocialDate } from "../../ConfigHyde/SocialDate"; // 导入SocialDate社交信息模块
 
+// 过滤掉注释行，只保留有效的一言
+const filteredHitokotoDate = HitokotoDate.filter(quote => 
+  quote && typeof quote === 'string' && !quote.trim().startsWith('//')
+);
+
 
 // 文档配置
 export const teekDocConfig: TeekConfig = {
@@ -55,13 +60,11 @@ const teekBlogCommonConfig: TeekConfig = {
     titleFontSize: "3.2rem", // 标题字体大小
     descFontSize: "1.4rem", // 描述字体大小
     descStyle: "types", // 描述信息风格：default 为纯文字渲染风格（如果 description 为数组，则取第一个），types 为文字打印风格，switch 为文字切换风格
-    description: HitokotoDate, // 描述信息
-    switchTime: 4000, // 描述信息切换间隔时间，单位：毫秒。descStyle 为 switch 时生效
-    switchShuffle: true, // 描述信息是否随机切换，为 false 时按顺序切换。descStyle 为 switch 时生效
+    description: filteredHitokotoDate, // 描述信息
     typesInTime: 200, // 输出一个文字的时间，单位：毫秒。descStyle 为 types 时生效
     typesOutTime: 100, // 删除一个文字的时间，单位：毫秒。descStyle 为 types 时生效
-    typesNextTime: 800, // 打字与删字的间隔时间，单位：毫秒。descStyle 为 types 时生效
-    typesShuffle: false, // 描述信息是否随机打字，为 false 时按顺序打字，descStyle 为 types 时生效
+    typesNextTime: 1000, // 打字与删字的间隔时间，单位：毫秒。descStyle 为 types 时生效
+    typesShuffle: true, // 描述信息是否随机打字，为 false 时按顺序打字，descStyle 为 types 时生效
   },  
 
   // // 首页顶部按 F11 开启壁纸模式
