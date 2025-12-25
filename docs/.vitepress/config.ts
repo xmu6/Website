@@ -66,7 +66,7 @@ const teekConfig = defineTeekConfig({
     avatar: "/img/xyy.webp",  //侧边栏个人头像
     shape: "circle-rotate", // 头像风格：square 为方形头像，circle 为圆形头像，circle-rotate 可支持鼠标悬停旋转
     name: "Xiaoml", // 侧边栏个人昵称
-    slogan: "在我电脑上能跑", // 侧边栏个人座右铭
+    slogan: "代码点亮人生，思维改变世界", // 侧边栏个人座右铭
     circleBgImg: "https://img.onedayxyy.cn/images/TeekBg/14.webp", // 侧边栏个人头像圆形背景图
     circleBgMask: false, // 头像圆形背景图是否显示遮罩层
     color: "#fff",
@@ -346,7 +346,11 @@ export default defineConfig({
   cleanUrls: true,  //设置为true就是让链接后不默认添加.html
   lastUpdated: true,
   lang: "zh-CN",
-  head: HeadData as HeadConfig[],
+  head: [
+    ...HeadData as HeadConfig[],
+    ["link", { rel: "icon", href: "/Website/favicon.ico", type: "image/x-icon" }],
+    ["link", { rel: "shortcut icon", href: "/Website/favicon.ico" }]
+  ],
   markdown: {
     // 开启行号
     lineNumbers: true,

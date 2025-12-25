@@ -60,7 +60,7 @@ export const HeadData = [
     "meta",
     { name: "msvalidate.01", content: "48CABE70F538B8D117567176ABF325AF" },
   ], // Bing 收录验证
-  ["link", { rel: "icon", href: "/favicon.ico", type: "image/png" }],
+  ["link", { rel: "icon", href: "/Website/favicon.ico", type: "image/x-icon" }],
   // 阿里在线矢量库
   [
     "link",

@@ -1,6 +1,9 @@
 ---
 layout: home
 
+title: Maolin Xiao
+titleTemplate: 能跑就行
+
 tk:
   teekHome: false
   features: # 可选的
