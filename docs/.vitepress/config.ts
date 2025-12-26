@@ -86,7 +86,7 @@ const teekConfig = defineTeekConfig({
     limit: 8, // 一页显示的数量
     autoPage: false, // 是否自动翻页
     pageSpeed: 4000, // 翻页间隔时间，单位：毫秒。autoPage 为 true 时生效
-  },  
+  },
   // 标签卡片
   tag: {
     enabled: true, // 是否启用标签卡片
@@ -331,7 +331,14 @@ const teekConfig = defineTeekConfig({
       content: `<img src='/img/alipay/1.png'><img src='/img/alipay/2.png'>`, // 赞赏内容，支持 HTML
       expand: false, // 是否默认展开，默认 false
     },
-  },  
+  },
+
+  // 我的信息卡片配置
+  myCard: {
+    avatarTitle: "玉面郎君", // 博主头像hover提示语
+  },
+
+
 });
 
 // https://vitepress.dev/reference/site-config
@@ -394,7 +401,12 @@ export default defineConfig({
         dateStyle: 'full',
         timeStyle: 'medium'
       }
-    },    
+    },
+
+  // 我的信息卡片配置
+  myCard: {
+    avatarTitle: "玉面郎君", // 博主头像hover提示语
+  },
     outline: {
       level: [2, 4],
       label: "本页导航",
@@ -487,7 +499,7 @@ export default defineConfig({
     // 构建
     build: {
       chunkSizeWarningLimit: 1500, // 限制警告的块大小
-    },    
+    },
 
     plugins: [
       // 自动注入一级前缀（rewrite模式）
@@ -539,6 +551,11 @@ export default defineConfig({
 
     ],
 
+  },
+
+  // 我的信息卡片配置
+  myCard: {
+    avatarTitle: "玉面郎君", // 博主头像hover提示语
   },  
 
   transformHtml: (code, id, context) => {
