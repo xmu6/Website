@@ -47,8 +47,8 @@ const teekConfig = defineTeekConfig({
     hideMask: true, // 开启壁纸模式后，是否隐藏 Banner 或 bodyBgImage 的遮罩层，则确保 banner.mask 和 bodyBgImage.mask 为 true 才生效
   },
 
-  loading: false, // 启用 Loading 动画，为 false 则关闭 Loading 动画
-  // loading: "正在加载中...", // 修改 Loading 文案
+  // loading: true, // 启用 Loading 动画，为 false 则关闭 Loading 动画
+  loading: "拼命加载中，你先别急...", // 修改 Loading 文案
 
 
   themeEnhance: {
