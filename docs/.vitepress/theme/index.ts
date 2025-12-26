@@ -49,8 +49,17 @@ import SLink from "./components/SLink/index.vue"; //友链
 import CoupleAlbum from './components/CoupleAlbum/CoupleAlbum.vue'
 import PhotoCard from './components/CoupleAlbum/PhotoCard.vue'
 
+import "./components/guangbiaoTX/guangbiaoTX.scss"; // ⬅️ 鼠标拖尾样式scss
+import { useGuangbiaoTX } from "./components/guangbiaoTX/useGuangbiaoTX"; // ⬅️ 导入鼠标拖尾星星动画ts
 
+// 🔽 鼠标拖尾星星动画
+if (typeof window !== "undefined") {
+  useGuangbiaoTX();
+}
+import { initImageViewer } from "./style/dd-image/dd-image.ts" // 引入图片查看器功能（替换原版
 
+// 🔽 替换原版图片查看器
+initImageViewer();
 // import "./style/sidebar-icon.scss";
 
 export default {
