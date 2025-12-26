@@ -356,7 +356,16 @@ export default defineConfig({
   head: [
     ...HeadData as HeadConfig[],
     ["link", { rel: "icon", href: "/Website/favicon.ico", type: "image/x-icon" }],
-    ["link", { rel: "shortcut icon", href: "/Website/favicon.ico" }]
+    ["link", { rel: "shortcut icon", href: "/Website/favicon.ico" }],
+    // 鼠标爆炸效果
+    [
+      'script',
+      {
+        src: '/Website/js/click-fireworks.js',
+        type: 'text/javascript',
+        defer: true,
+      },
+    ],
   ],
   markdown: {
     // 开启行号
