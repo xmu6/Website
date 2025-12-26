@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { onMounted, onUnmounted, nextTick, watch } from 'vue'
-import { useRoute } from 'vitepress'
+import { useRoute, withBase } from 'vitepress'
 import { fetchDynamicWallpapers, WALLPAPER_SERVICE_CONFIG } from '../../ConfigHyde/Wallaper'
 import { useData } from 'vitepress'
 
@@ -649,36 +649,59 @@ function startServiceMonitoring() {
 
 // 获取备用图片列表
 function getFallbackImages(): string[] {
-  // 从 Wallaper.ts 导入的备用图片
+  // 使用本地图片并通过 withBase 处理 base 路径
   const fallbackImages = [
-    "https://img.xxdevops.cn/blog/wallpaper/bg01.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg02.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg03.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg04.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg05.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg06.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg07.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg08.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg09.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg10.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg11.webp", 
-    "https://img.xxdevops.cn/blog/wallpaper/bg12.webp",
-    "https://img.xxdevops.cn/blog/wallpaper/bg13.webp",
-    "https://img.xxdevops.cn/blog/wallpaper/bg14.webp",
-    "https://img.xxdevops.cn/blog/wallpaper/bg15.webp",
-    "https://img.xxdevops.cn/blog/wallpaper/bg16.webp",
-    "https://img.xxdevops.cn/blog/wallpaper/bg17.webp",
-    "https://img.xxdevops.cn/blog/wallpaper/bg18.webp",
-    "https://img.xxdevops.cn/blog/wallpaper/bg19.webp",
-    "https://img.xxdevops.cn/blog/wallpaper/bg20.webp"
+    withBase("/bizhi/1.webp"), 
+    withBase("/bizhi/2.webp"), 
+    withBase("/bizhi/3.webp"), 
+    withBase("/bizhi/4.webp"), 
+    withBase("/bizhi/5.webp"), 
+    withBase("/bizhi/6.webp"), 
+    withBase("/bizhi/7.webp"), 
+    withBase("/bizhi/8.webp"), 
+    withBase("/bizhi/9.webp"), 
+    withBase("/bizhi/10.webp"), 
+    withBase("/bizhi/11.webp"), 
+    withBase("/bizhi/12.webp"),
+    withBase("/bizhi/13.webp"),
+    withBase("/bizhi/14.webp"),
+    withBase("/bizhi/15.webp"),
+    withBase("/bizhi/16.webp"),
+    withBase("/bizhi/17.webp"),
+    withBase("/bizhi/18.webp"),
+    withBase("/bizhi/19.webp"),
+    withBase("/bizhi/20.webp")
   ]
   return fallbackImages
+}
+
+// 处理图片路径 - 如果是相对路径（以 / 开头且非 http），使用 withBase 处理
+function processImagePath(img: string): string {
+  // 检查是否是绝对 URL（http/https 开头）
+  if (img.startsWith('http://') || img.startsWith('https://')) {
+    return img
+  }
+  // 检查是否是相对路径（以 / 开头且不是 //）
+  if (img.startsWith('/') && !img.startsWith('//')) {
+    // 如果路径已经包含 /Website/ 前缀，直接返回（避免重复添加）
+    if (img.startsWith('/Website/')) {
+      return img
+    }
+    return withBase(img)
+  }
+  return img
+}
+
+// 处理图片列表路径
+function processImagePaths(images: string[]): string[] {
+  return images.map(processImagePath)
 }
 
 // 从图集服务器获取图库列表
 async function fetchImageLibrary() {
   try {
-    const images = await fetchDynamicWallpapers()
+    const rawImages = await fetchDynamicWallpapers()
+    const images = processImagePaths(rawImages) // 处理路径
     
     // 检查是否获取到有效的动态图片（非备用图片）
     const fallbackImages = getFallbackImages()
@@ -737,18 +760,20 @@ onMounted(async () => {
   const cachedImages = loadImagesFromCache()
 
   if (lastImage) {
-    console.log('🎯 发现缓存壁纸，立即显示:', lastImage)
-    currentDisplayImage = lastImage
+    // 处理缓存的壁纸路径
+    const processedLastImage = processImagePath(lastImage)
+    console.log('🎯 发现缓存壁纸，立即显示:', lastImage, '处理后:', processedLastImage)
+    currentDisplayImage = processedLastImage
 
     // 确保banner容器正确设置后再显示壁纸
     ensureBannerContentStability()
 
     // 立即显示缓存的壁纸，避免任何背景色闪烁
-    initBannerBackground(lastImage)
+    initBannerBackground(processedLastImage)
 
     // 如果有缓存图库，优先使用
     if (cachedImages.length > 0) {
-      currentImages = cachedImages
+      currentImages = processImagePaths(cachedImages)
       console.log(`📦 加载缓存图库: ${cachedImages.length} 张图片`)
     } else {
       // 没有缓存图库时使用备用图片
@@ -756,12 +781,13 @@ onMounted(async () => {
     }
   } else if (cachedImages.length > 0) {
     // 没有上次图片但有缓存图库，立即显示一张
-    currentImages = cachedImages
+    const processedCachedImages = processImagePaths(cachedImages)
+    currentImages = processedCachedImages
     console.log(`📦 加载缓存图库: ${cachedImages.length} 张图片`)
 
     ensureBannerContentStability()
 
-    const randomImg = cachedImages[Math.floor(Math.random() * cachedImages.length)]
+    const randomImg = processedCachedImages[Math.floor(Math.random() * processedCachedImages.length)]
     currentDisplayImage = randomImg
     initBannerBackground(randomImg)
   } else {
