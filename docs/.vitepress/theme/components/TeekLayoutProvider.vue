@@ -34,7 +34,8 @@ import WechatAccountCard from "./WechatAccountCard.vue";
 import WelcomeCard from "./WelcomeCard.vue"; //导入欢迎卡片组件
 
 import CalendarCard from "./CalendarCard.vue"; //日历卡片
-import ScheduleCard from "./ScheduleCard.vue"; //节日倒计时卡片
+import ScheduleCard from "./ScheduleCard.vue";
+import GlobalGreet from "./GlobalGreet.vue"; //节日倒计时卡片
 
 const ns = "layout-provider";
 const { frontmatter } = useData();
@@ -89,7 +90,7 @@ const handleConfigSwitch = (config: TeekConfig, style: string) => {
   <Teek.Layout>
     <template #layout-top>
       <!-- 全局问候组件 -->
-      <!-- <GlobalGreet /> -->
+       <GlobalGreet />
       <!-- 看板娘组件 -->
        <OhMyLive2D />
       <!-- 顶部滚动条组件 -->
@@ -133,13 +134,13 @@ const handleConfigSwitch = (config: TeekConfig, style: string) => {
 
     <!-- 自定义公告卡片 -->
     <template #teek-home-card-my-after>
-      <WelcomeCard />
+<!--      <WelcomeCard />-->
 <!--      <NoticeCard />-->
     </template>
 
     <!-- 自定义公告卡片 -->
     <template #teek-home-card-doc-analysis-after>
-      <WechatAccountCard />
+<!--      <WechatAccountCard />-->
     </template>
 
     <!-- 自定义公告卡片 公告-->

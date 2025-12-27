@@ -44,7 +44,7 @@ const noticeContent: NoticeContent = {
   subtitle: '将谋他就📣',
   content: '仆于联洲，颇感困蹇🌀，方励志易辙。拟俟开岁，即奉尺素鲤书，以求新途✉️',
   operationButtonName: '查看详情',
-  operationButtonPath: 'https://vp.teek.top/',
+  operationButtonPath: 'https://github.com/xmu6',
 };
 
 // 判断是否为外链

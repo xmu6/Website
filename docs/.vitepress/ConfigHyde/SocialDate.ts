@@ -5,7 +5,7 @@ export const SocialDate: Social[] = [
   {
     icon: "icon-github",
     name: "GitHub",
-    link: "https://github.com/xmu6/Website",
+    link: "https://github.com/xmu6",
   },
   {
     icon: "icon-gitee2",
