@@ -3,27 +3,27 @@ import { Social } from "vitepress-theme-teek/config";
 
 export const SocialDate: Social[] = [
   {
-    icon: "mdi:github",
+    icon: "icon-github",
     name: "GitHub",
-    link: "https://cnb.cool/onedayxyy",
+    link: "https://github.com/xmu6/Website",
   },
   {
-    icon: "simple-icons:gitee",
+    icon: "icon-gitee2",
     name: "Gitee",
-    link: "https://cnb.cool/onedayxyy/vitepress-theme-teek-one-public",
+    link: "https://gitee.com/xiaoml666",
   },
   {
     icon: "icon-qq",
     iconType: "iconfont",
     name: "QQ",
     // link: "http://wpa.qq.com/msgrd?v=3&uin=2675263825&site=qq&menu=yes",
-    link: "https://img.onedayxyy.cn/images/Teekwebsite/teek-hg-qq.jpg",
+    link: "/img/wechat/qq.png",
   },
   {
     icon: "icon-mobile",
     iconType: "iconfont",
     name: "微信",
     // link: "https://onedayxyy.cn/?contact=true",
-    link: "https://img.onedayxyy.cn/images/image-20230107215114763-1694437284994-1-1697348761221-1-1697407921190-1-1697636582091-3-1698965093137-1.png",
+    link: "/img/wechat/wechat.png",
   },
 ];

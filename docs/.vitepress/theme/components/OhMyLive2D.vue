@@ -9,34 +9,34 @@ onMounted(async () => {
   const oml2d = loadOml2d({
     models: [
 
-      {
-        name: "black-cat", //黑猫
-        path: "https://model.hacxy.cn/cat-black/model.json",
-        scale: 0.15,
-        position: [0, 20],
-        stageStyle: {
-          height: 350,
-        },
-        clothesIndex: 1,
-      },
+      // {
+      //   name: "black-cat", //黑猫
+      //   path: "https://model.hacxy.cn/cat-black/model.json",
+      //   scale: 0.15,
+      //   position: [0, 20],
+      //   stageStyle: {
+      //     height: 350,
+      //   },
+      //   clothesIndex: 1,
+      // },
 
       {
         name: "HK416-1-destroy", // 紫色-好看
         path: "https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/girls-frontline/HK416-1/destroy/model.json",
-        scale: 0.09,
+        scale: 0.08,
         volume: 0,
-        position: [20, -40],
+        position: [20, 20],
         stageStyle: {
           height: 350,
           width: 330,
         },
       },
 
-      {
-        name: "senko", //小狐狸
-        path: "https://model.hacxy.cn/Senko_Normals/senko.model3.json",
-        position: [-10, 20],
-      },
+      // {
+      //   name: "senko", //小狐狸
+      //   path: "https://model.hacxy.cn/Senko_Normals/senko.model3.json",
+      //   position: [-10, 20],
+      // },
 
       {
         name: "HK416", //紫色cos-枪
@@ -131,20 +131,20 @@ onMounted(async () => {
             oml2d.loadRandomModel(); // 随机加载模型
           },
         },
-        {
-          id: "About",
-          icon: "icon-about",
-          title: "关于",
-          onClick: () => {
-            window.open("https://onedayxyy.cn/");
-          },
-        },
+        // {
+        //   id: "About",
+        //   icon: "icon-about",
+        //   title: "关于",
+        //   onClick: () => {
+        //     window.open("https://onedayxyy.cn/");
+        //   },
+        // },
         {
           id: "gitee",
-          icon: "icon-gitee",
-          title: "gitee",
+          icon: "icon-github",
+          title: "gitbug",
           onClick: () => {
-            window.open("https://cnb.cool/onedayxyy/vitepress-theme-teek-one-public");
+            window.open("https://github.com/xmu6/Website");
           },
         },
       ],
@@ -167,10 +167,10 @@ onMounted(async () => {
           "快来和我一起探索吧~",
         ], // 提示框内容
         priority: 10, //优先级，值越大，优先级越高
-        wordTheDay: (wordTheDayData) => {
-          // return wordTheDayData.hitokoto;  // 一言文本
-          return `${wordTheDayData.hitokoto}${wordTheDayData.from}`; // 一言+作者来源
-        },
+        // wordTheDay: (wordTheDayData) => {
+        //   // return wordTheDayData.hitokoto;  // 一言文本
+        //   return `${wordTheDayData.hitokoto}${wordTheDayData.from}`; // 一言+作者来源
+        // },
       },
       messageLine: 2, // 提示消息最大显示行数
       // 模型入场后的欢迎提示
@@ -271,11 +271,11 @@ onMounted(async () => {
 
     // oml2d.statusBarOpen('你干嘛', 'pink'); //弹出状态条并保持打开状态
 
-    oml2d.statusBarPopup("爱自己", oml2d.options.primaryColor); // 使用配置的主色调
+    oml2d.statusBarPopup("看板娘", oml2d.options.primaryColor); // 使用配置的主色调
 
     oml2d.stopTipsIdle(); //停止空闲消息播放器
 
-    oml2d.tipsMessage(`欢迎访问One Blog，当前版本:${oml2d.version}`, 5000, 10);
+    oml2d.tipsMessage(`欢迎访问主人的网页`, 5000, 10);
   });
 
   // 舞台完全滑出事件

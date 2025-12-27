@@ -22,7 +22,7 @@ import DocFooterCopyright from "./DocFooterCopyright.vue"; //导入文档页脚�
 
 import BackTop from "./BackTop.vue"; //导入回到顶部组件
 import Clock from "./Clock.vue"; // 时钟组件
-// import OhMyLive2D from "./OhMyLive2D.vue"; //导入看板娘组件
+import OhMyLive2D from "./OhMyLive2D.vue"; //导入看板娘组件
 
 
 // @ts-ignore
@@ -31,8 +31,10 @@ import Clock from "./Clock.vue"; // 时钟组件
 import NoticeCard from "./NoticeCard.vue";
 import WechatAccountCard from "./WechatAccountCard.vue";
 // import RouteSwitchingLoading from "./RouteSwitchingLoading.vue"; // 过渡动画组件
+import WelcomeCard from "./WelcomeCard.vue"; //导入欢迎卡片组件
 
-
+import CalendarCard from "./CalendarCard.vue"; //日历卡片
+import ScheduleCard from "./ScheduleCard.vue"; //节日倒计时卡片
 
 const ns = "layout-provider";
 const { frontmatter } = useData();
@@ -89,7 +91,7 @@ const handleConfigSwitch = (config: TeekConfig, style: string) => {
       <!-- 全局问候组件 -->
       <!-- <GlobalGreet /> -->
       <!-- 看板娘组件 -->
-      <!-- <OhMyLive2D /> -->
+       <OhMyLive2D />
       <!-- 顶部滚动条组件 -->
       <ScrollProgressBar />
       <!--网页标题切换组件  -->
@@ -131,12 +133,21 @@ const handleConfigSwitch = (config: TeekConfig, style: string) => {
 
     <!-- 自定义公告卡片 -->
     <template #teek-home-card-my-after>
-      <NoticeCard />
+      <WelcomeCard />
+<!--      <NoticeCard />-->
     </template>
 
     <!-- 自定义公告卡片 -->
     <template #teek-home-card-doc-analysis-after>
       <WechatAccountCard />
+    </template>
+
+    <!-- 自定义公告卡片 公告-->
+    <template #teek-home-card-top-article-before>
+<!--      <WelcomeCard />-->
+      <NoticeCard />
+      <CalendarCard />
+      <ScheduleCard />
     </template>
 
     <!-- 回到顶部组件 -->

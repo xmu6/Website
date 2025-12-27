@@ -57,7 +57,7 @@ if (typeof window !== "undefined") {
   useGuangbiaoTX();
 }
 import { initImageViewer } from "./style/dd-image/dd-image.ts" // 引入图片查看器功能（替换原版
-
+import { useCopyEvent } from "./composables/useCopyEvent.ts";
 // 🔽 替换原版图片查看器
 initImageViewer();
 // import "./style/sidebar-icon.scss";
@@ -103,6 +103,9 @@ export default {
   Layout: defineComponent({
     name: "LayoutProvider",
     setup() {
+      if (typeof window !== "undefined") {
+        useCopyEvent()
+      }
       const props: Record<string, any> = {};
       const { frontmatter } = useData();
 
