@@ -2,32 +2,10 @@
 
 <div align="center">
 
-[Github](https://github.com/Kele-Bingtang/vitepress-theme-teek) ｜ [Gitee](https://gitee.com/kele-bingtang/vitepress-theme-teek) ｜ [Preview](https://notes.teek.top/) ｜[Docs](http://vp.teek.top/)
 
 ✨一个轻量、简洁高效、灵活配置、易于扩展的 VitePress       主题。
 
 </div>
-
-<p align="center">
-  <a title="Github release" target="_blank" href="https://github.com/Kele-Bingtang/vitepress-theme-teek/releases">
-    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/Kele-Bingtang/vitepress-theme-teek?logo=github">
-  </a>
-
-  <a title="Npm Version" target="_blank" href="https://www.npmjs.com/package/vitepress-theme-teek">
-    <img src="https://img.shields.io/npm/v/vitepress-theme-teek?logo=npm&color=%09%23bf00ff" alt="https://img.shields.io/npm/v/vitepress-theme-teek?color=%09%23bf00ff">
-  </a>
-
-  <img src="https://img.shields.io/badge/v18.x-x?logo=node.js&label=node" alt="node version">
-  <img src="https://img.shields.io/github/languages/code-size/Kele-Bingtang/vitepress-theme-teek?logo=Visual Studio Code&logoColor=blue" alt="GitHub code size in bytes">
-
-  <a title="GitHub Discussions" target="_blank" href="https://github.com/Kele-Bingtang/vitepress-theme-teek/discussions">
-    <img src="https://img.shields.io/github/discussions/Kele-Bingtang/vitepress-theme-teek?color=9cf&logo=github" alt="GitHub Discussions">
-  </a>
-
-  <a title="MIT License" target="_blank" href="https://github.com/Kele-Bingtang/vitepress-theme-teek/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT License">
-  </a>
-</p>
 
 ## Teek 在线安装
 
@@ -40,7 +18,7 @@
 项目拉取
 
 ```bash
-git clone https://cnb.cool/onedayxyy/vitepress-theme-teek-one-public.git
+git clone https://github.com/xmu6/Website.git
 ```
 
 依赖安装（只能用 pnpm 安装依赖）
@@ -55,6 +33,5 @@ pnpm install
 pnpm docs:dev
 ```
 
-## License
-
-[MIT](./LICENSE) License © 2025 [Teeker](https://github.com/Kele-Bingtang)
+## 项目说明
+本项目是基于开源框架构建的个人知识库与作品集网站（详见 [ [Xiaoml](https://xmu6.github.io/Website/) ]），当前处于内容迁移与功能完善阶段，部分模块仍在开发中。后续计划将静态资源（如图片、文件等）迁移至专业的对象存储与全球加速服务，以优化访问速度与项目管理。
