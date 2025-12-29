@@ -67,7 +67,7 @@ const teekConfig = defineTeekConfig({
     shape: "circle-rotate", // 头像风格：square 为方形头像，circle 为圆形头像，circle-rotate 可支持鼠标悬停旋转
     name: "Maolin Xiao", // 侧边栏个人昵称
     slogan: "代码点亮人生，思维改变世界", // 侧边栏个人座右铭
-    circleBgImg: "https://img.onedayxyy.cn/images/TeekBg/14.webp", // 侧边栏个人头像圆形背景图
+    circleBgImg: "https://picbed-1392875824.cos.ap-chongqing.myqcloud.com/blog/18.webp", // 侧边栏个人头像圆形背景图
     circleBgMask: false, // 头像圆形背景图是否显示遮罩层
     color: "#fff",
 
@@ -333,11 +333,6 @@ const teekConfig = defineTeekConfig({
     },
   },
 
-  // 我的信息卡片配置
-  myCard: {
-    avatarTitle: "玉面郎君", // 博主头像hover提示语
-  },
-
 
 });
 
@@ -412,10 +407,6 @@ export default defineConfig({
       }
     },
 
-  // 我的信息卡片配置
-  myCard: {
-    avatarTitle: "玉面郎君", // 博主头像hover提示语
-  },
     outline: {
       level: [2, 4],
       label: "本页导航",
@@ -561,11 +552,6 @@ export default defineConfig({
     ],
 
   },
-
-  // 我的信息卡片配置
-  myCard: {
-    avatarTitle: "玉面郎君", // 博主头像hover提示语
-  },  
 
   transformHtml: (code, id, context) => {
     if (context.page !== "404.md") return code;
