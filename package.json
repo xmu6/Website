@@ -5,9 +5,10 @@
   "description": "vitepress-theme-teek 文档模板",
   "type": "module",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "node --max-old-space-size=131072 node_modules/vitepress/bin/vitepress.js build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:dev": "node scripts/fix-locale.js && vitepress dev docs",
+    "docs:build": "node scripts/fix-locale.js && node --max-old-space-size=131072 node_modules/vitepress/bin/vitepress.js build docs",
+    "docs:preview": "node scripts/fix-locale.js && vitepress preview docs",
+    "postinstall": "node scripts/fix-locale.js"
   },
   "devDependencies": {
     "echarts": "^5.6.0",

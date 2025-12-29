@@ -1,9 +1,8 @@
 // 组件导入
 import Teek from "vitepress-theme-teek";
 import TeekLayoutProvider from "./components/TeekLayoutProvider.vue";
-import { defineComponent, h, ref } from "vue";
+import { defineComponent, h } from "vue";
 import { useData } from "vitepress";
-import { useLocale } from "vitepress-theme-teek";
 // import notice from "./components/notice.vue";
 // import MNavLinks from "./components/MNavLinks.vue"; // 引入导航组件
 import confetti from "./components/Confetti.vue"; //导入五彩纸屑组件
@@ -72,22 +71,11 @@ export default {
 
     app.component('CoupleAlbum', CoupleAlbum) // 注册情侣相册组件
     app.component('PhotoCard', PhotoCard)
-    
+
     // app.component("NavIcon", NavIcon); //导航栏图标
 
     // 注册全局组件
     app.component("friend-link", SLink);
-
-    // 提供国际化覆盖
-    const localeOverride = ref({
-      lang: "zh-CN",
-      tk: {
-        myCard: {
-          avatarTitle: "玉面郎君"
-        }
-      }
-    });
-    app.provide("localeContextKey", localeOverride);
 
     // 非SSR环境下配置路由进度条
     // @ts-expect-error
@@ -109,8 +97,8 @@ export default {
     //   router.onAfterRouteChanged = () => {
     //     NProgress.done(); // 停止进度条
     //   };
-    // },  
-    
+    // },
+
   },
   Layout: defineComponent({
     name: "LayoutProvider",
