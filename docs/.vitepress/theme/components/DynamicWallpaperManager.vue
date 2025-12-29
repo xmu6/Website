@@ -660,17 +660,7 @@ function getFallbackImages(): string[] {
     withBase("/bizhi/7.webp"), 
     withBase("/bizhi/8.webp"), 
     withBase("/bizhi/9.webp"), 
-    withBase("/bizhi/10.webp"), 
-    withBase("/bizhi/11.webp"), 
-    withBase("/bizhi/12.webp"),
-    withBase("/bizhi/13.webp"),
-    withBase("/bizhi/14.webp"),
-    withBase("/bizhi/15.webp"),
-    withBase("/bizhi/16.webp"),
-    withBase("/bizhi/17.webp"),
-    withBase("/bizhi/18.webp"),
-    withBase("/bizhi/19.webp"),
-    withBase("/bizhi/20.webp")
+    withBase("/bizhi/10.webp")
   ]
   return fallbackImages
 }
