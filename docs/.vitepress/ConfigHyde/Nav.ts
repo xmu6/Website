@@ -285,25 +285,25 @@ export const Nav = [
           link: '/about/time-line',
         },
         { text: "💡朋友圈", link: "/about/pyq" },
-        {
-          text: `
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="/img/nav/网站统计.svg" alt="" style="width: 16px; height: 16px;">
-              <span>网站统计</span>
-            </div>
-            `,
-          link: 'https://umami.onedayxyy.cn/share/DzS4g85V8JkxsNRk/onedayxyy.cn',
-        },
-        {
-          text: `
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="/img/nav/站点监控.svg" alt="" style="width: 16px; height: 16px;">
-              <span>站点监控</span>
-            </div>
-            `,
-          link: 'https://status.onedayxyy.cn/status/monitor',
-        },
-        { text: "📌我的云盘", link: "https://zdir.onedayxyy.cn/" },
+        // {
+        //   text: `
+        //     <div style="display: flex; align-items: center; gap: 4px;">
+        //       <img src="/img/nav/网站统计.svg" alt="" style="width: 16px; height: 16px;">
+        //       <span>网站统计</span>
+        //     </div>
+        //     `,
+        //   link: 'https://umami.onedayxyy.cn/share/DzS4g85V8JkxsNRk/onedayxyy.cn',
+        // },
+        // {
+        //   text: `
+        //     <div style="display: flex; align-items: center; gap: 4px;">
+        //       <img src="/img/nav/站点监控.svg" alt="" style="width: 16px; height: 16px;">
+        //       <span>站点监控</span>
+        //     </div>
+        //     `,
+        //   link: 'https://status.onedayxyy.cn/status/monitor',
+        // },
+        // { text: "📌我的云盘", link: "https://zdir.onedayxyy.cn/" },
 
       ],
     },       
