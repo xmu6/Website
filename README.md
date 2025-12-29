@@ -11,7 +11,7 @@
 
 具体信息见如下链接：《[Teek](https://onedayxyy.cn/teek)》
 
-![image-20250702074216619](https://img.onedayxyy.cn/images/image-20250702074216619.png)
+![image-20250702074216619](https://picbed-1392875824.cos.ap-chongqing.myqcloud.com/blog/20251230001134659.png)
 
 ## 本地运行
 
