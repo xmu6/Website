@@ -346,7 +346,7 @@ export default defineConfig({
   rewrites: createRewrites({
     srcDir: 'docs',
   }),
-  base: "/Website/",
+  base: "/",
   extends: teekConfig,
   title: "Maolin Xiao", //左上角网站名称
   description: description,
@@ -355,13 +355,13 @@ export default defineConfig({
   lang: "zh-CN",
   head: [
     ...HeadData as HeadConfig[],
-    ["link", { rel: "icon", href: "/Website/favicon.ico", type: "image/x-icon" }],
-    ["link", { rel: "shortcut icon", href: "/Website/favicon.ico" }],
+    ["link", { rel: "icon", href: "/favicon.ico", type: "image/x-icon" }],
+    ["link", { rel: "shortcut icon", href: "/favicon.ico" }],
     // 鼠标爆炸效果
     [
       'script',
       {
-        src: '/Website/js/click-fireworks.js',
+        src: '/js/click-fireworks.js',
         type: 'text/javascript',
         defer: true,
       },
