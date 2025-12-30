@@ -7,10 +7,10 @@ import { nextTick, ref, watch } from "vue";
 import { useClipboard, useStorage } from "vitepress-theme-teek";
 import {
   teekDocConfig,
-  teekBlogConfig,
-  teekBlogParkConfig,
-  teekBlogFullConfig,
-  teekBlogBodyConfig,
+  // teekBlogConfig,
+  // teekBlogParkConfig,
+  // teekBlogFullConfig,
+  // teekBlogBodyConfig,
   teekBlogCardConfig,
 } from "../config/teekConfig";
 
@@ -57,11 +57,11 @@ const { copy, copied } = useClipboard();
 const { isMobile } = useCommon();
 
 const update = async (style: string) => {
-  if (style === "doc") teekConfig.value = teekDocConfig;
-  if (style === "blog") teekConfig.value = teekBlogConfig;
-  if (style === "blog-part") teekConfig.value = teekBlogParkConfig;
-  if (style === "blog-full") teekConfig.value = teekBlogFullConfig;
-  if (style === "blog-body") teekConfig.value = teekBlogBodyConfig;
+  // if (style === "doc") teekConfig.value = teekDocConfig;
+  // if (style === "blog") teekConfig.value = teekBlogConfig;
+  // if (style === "blog-part") teekConfig.value = teekBlogParkConfig;
+  // if (style === "blog-full") teekConfig.value = teekBlogFullConfig;
+  // if (style === "blog-body") teekConfig.value = teekBlogBodyConfig;
   if (style === "blog-card") teekConfig.value = teekBlogCardConfig;
 
   emit("switch", teekConfig.value, style);
@@ -93,24 +93,24 @@ const handleCopy = async () => {
 };
 </script>
 
-<template>
-  <BaseTemplate
-    :class="ns"
-    :icon="magicIcon"
-    :title="tipInfo.title"
-    :helper="!isMobile"
-    :helper-desc="tipInfo.desc"
-    :tips="tipInfo.tips"
-  >
-    <template #title>
-      <div class="flx-justify-between flx-1">
-        {{ tipInfo.title }}
-        <button @click="handleCopy">Copy</button>
-      </div>
-    </template>
-    <TkSegmented v-model="currentStyle" :options="segmentedOptions" />
-  </BaseTemplate>
-</template>
+<!--<template>-->
+<!--  <BaseTemplate-->
+<!--    :class="ns"-->
+<!--    :icon="magicIcon"-->
+<!--    :title="tipInfo.title"-->
+<!--    :helper="!isMobile"-->
+<!--    :helper-desc="tipInfo.desc"-->
+<!--    :tips="tipInfo.tips"-->
+<!--  >-->
+<!--    <template #title>-->
+<!--      <div class="flx-justify-between flx-1">-->
+<!--        {{ tipInfo.title }}-->
+<!--        <button @click="handleCopy">Copy</button>-->
+<!--      </div>-->
+<!--    </template>-->
+<!--    <TkSegmented v-model="currentStyle" :options="segmentedOptions" />-->
+<!--  </BaseTemplate>-->
+<!--</template>-->
 
 <style lang="scss">
 $namespace: config-switch;
