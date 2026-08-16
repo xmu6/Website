@@ -25,13 +25,10 @@ import Clock from "./Clock.vue"; // 时钟组件
 import OhMyLive2D from "./OhMyLive2D.vue"; //导入看板娘组件
 
 
-// @ts-ignore
-// import InformationCard from "./InformationCard.vue";  //导入信息卡片和舔狗日记组件
-
 import NoticeCard from "./NoticeCard.vue";
-import WechatAccountCard from "./WechatAccountCard.vue";
+// import WechatAccountCard from "./WechatAccountCard.vue";
 // import RouteSwitchingLoading from "./RouteSwitchingLoading.vue"; // 过渡动画组件
-import WelcomeCard from "./WelcomeCard.vue"; //导入欢迎卡片组件
+// import WelcomeCard from "./WelcomeCard.vue"; //导入欢迎卡片组件
 
 import CalendarCard from "./CalendarCard.vue"; //日历卡片
 import ScheduleCard from "./ScheduleCard.vue";
@@ -100,8 +97,8 @@ const handleConfigSwitch = (config: TeekConfig, style: string) => {
       <!-- 返回顶部组件 -->
       <!--<BackToTop /> -->
       
-      <!-- 路由切换遮罩动画组件 -->
-      <RouteSwitchingLoading />
+      <!-- 路由切换遮罩动画组件（导入已禁用，如需启用取消上方 RouteSwitchingLoading 导入注释） -->
+      <!-- <RouteSwitchingLoading /> -->
     </template>
 
     <template #teek-theme-enhance-bottom>

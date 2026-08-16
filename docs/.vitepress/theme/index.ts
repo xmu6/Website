@@ -60,7 +60,6 @@ import { initImageViewer } from "./style/dd-image/dd-image.ts" // 引入图片�
 import { useCopyEvent } from "./composables/useCopyEvent.ts";
 // 🔽 替换原版图片查看器
 initImageViewer();
-// import "./style/sidebar-icon.scss";
 
 export default {
   extends: Teek,

@@ -271,6 +271,7 @@ const teekConfig = defineTeekConfig({
       resolveRule: "rewrites",
       checkRewritesPrefix: true,    
       ignoreIndexMd: true,
+      ignoreWarn: true, // “关于”目录下的页面均为 sidebar: false 的独立页面，屏蔽插件的目录侧边栏为空警告
     },
 
     autoFrontmatter: true, // 自动生成 frontmatter

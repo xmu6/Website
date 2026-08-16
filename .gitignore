@@ -30,8 +30,5 @@ coverage
 
 /**/.vitepress/cache/*
 
-# Tencent Cloud EdgeOne
+# 环境变量文件
 .env
-.edgeone/*
-.tef_dist/*
-  
