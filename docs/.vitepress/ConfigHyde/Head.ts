@@ -54,15 +54,15 @@ export const HeadData = [
       onload: "this.media='all'",
     },
   ],
-  // umami统计
-  [
-    "script",
-    {
-      src: "https://umami.onedayxyy.cn/script.js",
-      "data-website-id": "0d806f5d-cffa-41ec-98bf-862b2273ce4a",
-      defer: "defer",
-    },
-  ],
+  // umami统计（已停用：umami.onedayxyy.cn 证书失效 ERR_CERT_DATE_INVALID，如需恢复请先修复证书）
+  // [
+  //   "script",
+  //   {
+  //     src: "https://umami.onedayxyy.cn/script.js",
+  //     "data-website-id": "0d806f5d-cffa-41ec-98bf-862b2273ce4a",
+  //     defer: "defer",
+  //   },
+  // ],
   [
     "noscript",
     {},

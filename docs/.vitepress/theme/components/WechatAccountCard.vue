@@ -58,8 +58,8 @@ const wechatAccount: WechatAccount = {
   title: '📱 关注公众号',
   subtitle: '我的公众号',  // 替换为您的公众号名称
   description: '分享前端开发技巧、运维知识、VitePress使用经验和技术成长心得，欢迎关注交流！',  // 替换为您的公众号简介
-  qrcodeImage: 'https://img.onedayxyy.cn/images/wechat-gzh.jpg',  // 替换为您的公众号二维码图片URL
-  followLink: 'https://img.onedayxyy.cn/images/wechat-gzh.jpg',  // 可以替换为公众号文章链接或相关页面
+  qrcodeImage: '/img/wechat/wechat.png',  // 本地静态图，如需公众号二维码请替换为实际图片
+  followLink: '/img/wechat/wechat.png',  // 可以替换为公众号文章链接或相关页面
   followText: '扫码关注',
 };
 

@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, nextTick, watch } from 'vue'
 import { useRoute, withBase } from 'vitepress'
-import { fetchDynamicWallpapers, WALLPAPER_SERVICE_CONFIG } from '../../ConfigHyde/Wallaper'
+import { fetchDynamicWallpapers } from '../../ConfigHyde/Wallaper'
 import { useData } from 'vitepress'
 
 // 路由检测 - 只在首页启用动态壁纸
@@ -89,11 +89,12 @@ function saveImagesToCache(images: string[]) {
   }
 }
 
-// 从缓存加载图库
+// 从缓存加载图库（过滤掉历史遗留的远程 http 地址，仅保留本地路径）
 function loadImagesFromCache(): string[] {
   try {
     const cached = localStorage.getItem(CACHE_KEY)
-    return cached ? JSON.parse(cached) : []
+    const images = cached ? JSON.parse(cached) : []
+    return images.filter((img: string) => !img.startsWith('http://') && !img.startsWith('https://'))
   } catch (error) {
     console.warn('加载图库缓存失败:', error)
     return []
@@ -109,10 +110,15 @@ function saveLastImage(imageSrc: string) {
   }
 }
 
-// 获取最后显示的图片
+// 获取最后显示的图片（跳过历史遗留的远程 http 地址）
 function getLastImage(): string | null {
   try {
-    return localStorage.getItem(LAST_IMAGE_KEY)
+    const last = localStorage.getItem(LAST_IMAGE_KEY)
+    if (last && (last.startsWith('http://') || last.startsWith('https://'))) {
+      localStorage.removeItem(LAST_IMAGE_KEY)
+      return null
+    }
+    return last
   } catch (error) {
     console.warn('获取最后图片失败:', error)
     return null
@@ -572,35 +578,9 @@ async function displayRandomImage() {
 }
 
 
-// 检测图集服务是否可用（快速检测，用于初始加载）
+// 检测图集服务是否可用（图集服务已停用，壁纸全部改为本地静态加载，不再发起远程检测）
 async function checkServiceAvailability(): Promise<boolean> {
-  try {
-    const controller = new AbortController()
-    const timeoutId = setTimeout(() => controller.abort(), 2000) // 2秒快速超时，避免影响页面加载
-    
-    const response = await fetch(WALLPAPER_SERVICE_CONFIG.fullUrl, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-      },
-      signal: controller.signal
-    })
-    
-    clearTimeout(timeoutId)
-    
-    if (!response.ok) {
-      return false
-    }
-    
-    const data = await response.json()
-    if (!data.images || !Array.isArray(data.images) || data.images.length === 0) {
-      return false
-    }
-    
-    return true
-  } catch (error) {
-    return false
-  }
+  return false
 }
 
 // 服务状态监控（仅在使用备用图片时运行）
@@ -639,12 +619,9 @@ function stopServiceMonitoring() {
   }
 }
 
-// 启动服务监控（仅在切换到备用图片时启动）
+// 启动服务监控（图集服务已停用，壁纸全部本地加载，无需监控远程服务）
 function startServiceMonitoring() {
-  if (!serviceCheckIntervalId) {
-    serviceCheckIntervalId = window.setInterval(monitorServiceStatus, SERVICE_CHECK_INTERVAL)
-    console.log('👁️ 启动图集服务监控（15秒检测一次）')
-  }
+  // no-op
 }
 
 // 获取备用图片列表
@@ -819,45 +796,11 @@ onMounted(async () => {
 
   document.addEventListener('visibilitychange', handleVisibilityChange)
   
-  // 等待一个切换间隔后开始异步检测和切换
+  // 图集服务已停用，直接使用本地壁纸库（原远程检测逻辑已移除，避免无效请求）
   setTimeout(async () => {
-    console.log('🔍 开始检测图集服务状态并更新图库...')
-
-    try {
-      const controller = new AbortController()
-      const timeoutId = setTimeout(() => controller.abort(), 2000) // 2秒检测
-
-      const response = await fetch(WALLPAPER_SERVICE_CONFIG.fullUrl, {
-        method: 'GET',
-        headers: { 'Accept': 'application/json' },
-        signal: controller.signal
-      })
-
-      clearTimeout(timeoutId)
-
-      if (response.ok) {
-        // 服务可用：获取最新图库
-        console.log('✅ 图集服务可用，更新动态图库')
-        await fetchImageLibrary()
-
-        // 设置定时器：每60秒更新图库
-        fetchLibraryIntervalId = window.setInterval(fetchImageLibrary, FETCH_LIBRARY_INTERVAL)
-      } else {
-        throw new Error('服务响应异常')
-      }
-    } catch (error) {
-      // 服务不可用：确保使用备用图片并启动监控
-      console.log('❌ 图集服务不可用，确保使用备用壁纸')
-      if (!isUsingFallback) {
-        currentImages = getFallbackImages()
-        isUsingFallback = true
-        saveImagesToCache(currentImages) // 保存备用图库到缓存
-      }
-
-      // 启动服务监控，等待服务恢复
-      startServiceMonitoring()
-    }
-  }, 1000) // 延迟1秒开始检测，确保缓存壁纸已显示
+    console.log('📦 使用本地图库作为壁纸源')
+    await fetchImageLibrary()
+  }, 1000) // 延迟1秒，确保缓存壁纸已显示
   
   // 设置定时器：每10秒切换图片（确保统一的切换间隔）
   switchImageIntervalId = window.setInterval(displayRandomImage, SWITCH_IMAGE_INTERVAL)

@@ -40,3 +40,8 @@ onBeforeUnmount(() => {
     clearTimeout(titleTimer.value)
 })
 </script>
+
+<!-- 空模板：该组件仅处理标签页切换时的标题变化，无 UI 渲染，避免 Vue 缺失 render 函数警告 -->
+<template>
+  <span style="display: none"></span>
+</template>

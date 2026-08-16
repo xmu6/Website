@@ -15,21 +15,21 @@
 //   font-display: swap;
 // }
 
-@font-face {
-  font-family: "筑紫A丸";
-   //src: url("/fonts/筑紫A丸/TsukuARdGothicStd-Regular.woff2") format("woff2");
-  src: url("https://img.onedayxyy.cn/images/TsukuARdGothicStd-Regular.woff2") format("woff2");
-   //src: url("/fonts/筑紫A丸/TsukuARdGothicStd-Regular.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+// 筑紫A丸字体原文件已随远程图床失效，暂时停用 @font-face，自动回退到 PingFang SC
+// 如需恢复，请将真实 woff2 放到 docs/public/fonts/筑紫A丸/ 后取消下方注释
+// @font-face {
+//   font-family: "筑紫A丸";
+//   src: url("/fonts/筑紫A丸/TsukuARdGothicStd-Regular.woff2") format("woff2");
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
 
 
 
 /* 应用字体 */
 :root {
   // --vp-font-family-base: "筑紫A丸", "Ali_PuHuiTi", "霞鹜文楷", "PingFang SC", sans-serif; //base：影响正文、标题等文本。 
-  --vp-font-family-base: "筑紫A丸", "PingFang SC", sans-serif; //base：影响正文、标题等文本。 
+  --vp-font-family-base: "PingFang SC", sans-serif; //base：影响正文、标题等文本。（原“筑紫A丸”字体已停用）
   --vp-font-family-mono: "consolas", "JetBrains Mono", "Cascadia Mono", "Not Sans SC", monospace; //mono：影响代码块的等宽字体。  
 }

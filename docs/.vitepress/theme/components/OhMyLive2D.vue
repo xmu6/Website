@@ -20,15 +20,28 @@ onMounted(async () => {
       //   clothesIndex: 1,
       // },
 
+      // 原 GitHub raw 模型源已 404（iCharlesZ/vscode-live2d-models 仓库变更），改用可用模型
+      // {
+      //   name: "HK416-1-destroy", // 紫色-好看
+      //   path: "https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/girls-frontline/HK416-1/destroy/model.json",
+      //   scale: 0.08,
+      //   volume: 0,
+      //   position: [20, 20],
+      //   stageStyle: {
+      //     height: 350,
+      //     width: 330,
+      //   },
+      // },
+
       {
-        name: "HK416-1-destroy", // 紫色-好看
-        path: "https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/girls-frontline/HK416-1/destroy/model.json",
-        scale: 0.08,
+        name: "shizuku", // 桌前女孩，备用模型
+        path: "https://model.hacxy.cn/shizuku/shizuku.model.json",
+        scale: 0.2,
         volume: 0,
-        position: [20, 20],
+        position: [70, 70],
         stageStyle: {
-          height: 350,
-          width: 330,
+          height: 370,
+          width: 400,
         },
       },
 
