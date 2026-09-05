@@ -29,6 +29,7 @@ coverage
 *.sw?
 
 /**/.vitepress/cache/*
+/**/.vitepress/.temp/*
 
 # 环境变量文件
 .env

@@ -34,6 +34,6 @@ pnpm docs:dev
 ```
 
 ## 项目说明
-本项目是基于开源框架构建的个人知识库与作品集网站（详见 [[Xiaoml的个人网页](http://xiaomaolin.cn/)]），当前处于内容迁移与功能完善阶段，部分模块仍在开发中。
+本项目是基于开源框架构建的个人知识库与作品集网站（详见 [Xiaoml 的个人网页](https://xiaomaolin.cn/)），当前处于内容迁移与功能完善阶段，部分模块仍在开发中。
 
-由于部署在github page上，请使用魔法以流畅访问。（后续会考虑部署在国内服务器上）
+站点已部署在 [Cloudflare](https://www.cloudflare.com/) 上。
