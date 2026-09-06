@@ -381,7 +381,7 @@ export default defineConfig({
     },
   },
   sitemap: {
-    hostname: "https://onedayxyy.cn",
+    hostname: "https://xiaomaolin.cn",
     // transformItems: items => {
     //   const permalinkItemBak: typeof items = [];
     //   // 使用永久链接生成 sitemap
@@ -485,8 +485,7 @@ export default defineConfig({
     
     editLink: {
       text: "在 GitHub 上编辑此页",
-      // pattern: "https://github.com/Kele-Bingtang/vitepress-theme-teek/edit/master/docs/:path",
-      pattern: "https://onedayxyy.cn/teek/teek-one",
+      pattern: "https://github.com/xmu6/Website/edit/master/docs/:path",
     },
   },
 
