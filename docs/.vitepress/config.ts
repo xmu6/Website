@@ -383,6 +383,8 @@ export default defineConfig({
     ],
   ],
   markdown: {
+    // 启用 LaTeX 数学公式渲染（依赖 markdown-it-mathjax3，VitePress 内置 math 支持）
+    math: true,
     // 开启行号
     lineNumbers: true,
     image: {
