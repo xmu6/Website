@@ -36,11 +36,11 @@ coverImg: /covers/postman.webp
 
 - HTTP请求：有三部分组成，请求行、请求头、请求体。
 
-  <img src="/test-tools/postman/image-20240712155855345.png" alt="image-20240712155855345" style="zoom:67%;" />
+  <img src="/test-tools/postman/image-20240712155855345-880.webp" srcset="/test-tools/postman/image-20240712155855345-880.webp 1x, /test-tools/postman/image-20240712155855345-1049.webp 2x" width="880" height="369" data-full-src="/test-tools/postman/image-20240712155855345.png" alt="image-20240712155855345" style="zoom:67%;"  loading="lazy" decoding="async" />
 
 - HTTP响应：规定服务器回发给客户端的数据语法格式。响应行(状态行)、响应头、空行、响应体。
 
-  <img src="/test-tools/postman/image-20240712161946976.png" alt="image-20240712161946976" style="zoom:67%;" />
+  <img src="/test-tools/postman/image-20240712161946976-829.webp" srcset="/test-tools/postman/image-20240712161946976-829.webp 1x" width="829" height="310" data-full-src="/test-tools/postman/image-20240712161946976.png" alt="image-20240712161946976" style="zoom:67%;"  loading="lazy" decoding="async" />
 
 # 接口测试
 
@@ -106,7 +106,7 @@ coverImg: /covers/postman.webp
 
 ## 简介
 
-<img src="/test-tools/postman/image-20240715211913127.png" alt="image-20240715211913127" style="zoom:100%;" />
+<img src="/test-tools/postman/image-20240715211913127-494.webp" srcset="/test-tools/postman/image-20240715211913127-494.webp 1x" width="494" height="29" data-full-src="/test-tools/postman/image-20240715211913127.png" alt="image-20240715211913127" style="zoom:100%;"  loading="lazy" decoding="async" />
 
 - 查询字符串，会成为URL的一部分
 - 鉴权方式
@@ -116,7 +116,7 @@ coverImg: /covers/postman.webp
 - 后置脚本
 - 设置
 
-<img src="/test-tools/postman/image-20240715212424467.png" alt="image-20240715212424467" style="zoom:100%;" />
+<img src="/test-tools/postman/image-20240715212424467-369.webp" srcset="/test-tools/postman/image-20240715212424467-369.webp 1x" width="369" height="66" data-full-src="/test-tools/postman/image-20240715212424467.png" alt="image-20240715212424467" style="zoom:100%;"  loading="lazy" decoding="async" />
 
 - 正文（接口响应值）
   - 美化
@@ -145,7 +145,7 @@ coverImg: /covers/postman.webp
 
 2. 使用token
 
-   <img src="/test-tools/postman/QQ_1721469283600.png" alt="QQ_1721469283600" style="zoom:100%;" />
+   <img src="/test-tools/postman/QQ_1721469283600-846.webp" srcset="/test-tools/postman/QQ_1721469283600-846.webp 1x" width="846" height="382" data-full-src="/test-tools/postman/QQ_1721469283600.png" alt="QQ_1721469283600" style="zoom:100%;"  loading="lazy" decoding="async" />
 
    底层原理：添加请求头：`Authorization`，请求头值：`Bearer`+`空格`+token
 
@@ -167,7 +167,7 @@ coverImg: /covers/postman.webp
 
 - 创建变量
 
-  ![QQ_1721470971855](/test-tools/postman/QQ_1721470971855.png)
+  <img src="/test-tools/postman/QQ_1721470971855-880.webp" srcset="/test-tools/postman/QQ_1721470971855-880.webp 1x, /test-tools/postman/QQ_1721470971855-1139.webp 2x" alt="QQ_1721470971855" width="880" height="191" loading="lazy" decoding="async" data-full-src="/test-tools/postman/QQ_1721470971855.png">
 
   或
 
@@ -175,11 +175,11 @@ coverImg: /covers/postman.webp
 
   - 自动创建
 
-    ![QQ_1721471289112](/test-tools/postman/QQ_1721471289112.png)
+    <img src="/test-tools/postman/QQ_1721471289112-880.webp" srcset="/test-tools/postman/QQ_1721471289112-880.webp 1x, /test-tools/postman/QQ_1721471289112-1022.webp 2x" alt="QQ_1721471289112" width="880" height="245" loading="lazy" decoding="async" data-full-src="/test-tools/postman/QQ_1721471289112.png">
 
     或
 
-    ![QQ_1721471480551](/test-tools/postman/QQ_1721471480551.png)
+    <img src="/test-tools/postman/QQ_1721471480551-880.webp" srcset="/test-tools/postman/QQ_1721471480551-880.webp 1x, /test-tools/postman/QQ_1721471480551-1174.webp 2x" alt="QQ_1721471480551" width="880" height="115" loading="lazy" decoding="async" data-full-src="/test-tools/postman/QQ_1721471480551.png">
 
 - pm常用对象
 

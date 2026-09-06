@@ -309,7 +309,7 @@ select dname, ename, salary, row_number() over (
 ) as rn from employee;
 ```
 
-<img src="/mysql/MySQL.assets/image-20240315195214855.png" alt="image-20240315195214855" style="zoom:80%;" />
+<img src="/mysql/MySQL.assets/image-20240315195214855-844.webp" srcset="/mysql/MySQL.assets/image-20240315195214855-844.webp 1x" width="844" height="435" data-full-src="/mysql/MySQL.assets/image-20240315195214855.png" alt="image-20240315195214855" style="zoom:80%;"  loading="lazy" decoding="async" />
 
 三种对应分别为：（大，大，小）→（1,2,3）；（大，大，小）→（1,1,3）；（大，大，小）→（1,1,2）；
 
@@ -385,7 +385,7 @@ end;
 
 MySQL中定义了NEW和OLD，用来表示触发器的所在表中，触发了触发器的那一行数据，来引用触发器中发生变化的记录内容
 
-<img src="/mysql/MySQL.assets/image-20240315202237154.png" alt="image-20240315202237154" style="zoom:80%;" />
+<img src="/mysql/MySQL.assets/image-20240315202237154-880.webp" srcset="/mysql/MySQL.assets/image-20240315202237154-880.webp 1x, /mysql/MySQL.assets/image-20240315202237154-1015.webp 2x" width="880" height="328" data-full-src="/mysql/MySQL.assets/image-20240315202237154.png" alt="image-20240315202237154" style="zoom:80%;"  loading="lazy" decoding="async" />
 
 ```mysql
 create trigger tri after insert on user for each row
@@ -429,7 +429,7 @@ MySQL 支持多种索引类型，包括：
 
 **分类**
 
-<img src="/mysql/MySQL.assets/image-20240315203933192.png" alt="image-20240315203933192" style="zoom:67%;" />
+<img src="/mysql/MySQL.assets/image-20240315203933192-865.webp" srcset="/mysql/MySQL.assets/image-20240315203933192-865.webp 1x" width="865" height="483" data-full-src="/mysql/MySQL.assets/image-20240315203933192.png" alt="image-20240315203933192" style="zoom:67%;"  loading="lazy" decoding="async" />
 
 **具体**
 
@@ -625,19 +625,19 @@ MySQL 会定期检查是否存在死锁，如果发现死锁，则会选择其�
 
 - 正在执行的SQL语句`show processlist`
 
-  <img src="/mysql/MySQL.assets/image-20240315213843736.png" alt="image-20240315213843736" style="zoom:80%;" />
+  <img src="/mysql/MySQL.assets/image-20240315213843736-880.webp" srcset="/mysql/MySQL.assets/image-20240315213843736-880.webp 1x, /mysql/MySQL.assets/image-20240315213843736-1004.webp 2x" width="880" height="422" data-full-src="/mysql/MySQL.assets/image-20240315213843736.png" alt="image-20240315213843736" style="zoom:80%;"  loading="lazy" decoding="async" />
 
 - 查询执行计划：explain 语句；
 
-  ![image-20240315213936875](/mysql/MySQL.assets/image-20240315213936875.png)
+  <img src="/mysql/MySQL.assets/image-20240315213936875-880.webp" srcset="/mysql/MySQL.assets/image-20240315213936875-880.webp 1x, /mysql/MySQL.assets/image-20240315213936875-984.webp 2x" alt="image-20240315213936875" width="880" height="386" loading="lazy" decoding="async" data-full-src="/mysql/MySQL.assets/image-20240315213936875.png">
 
   id相同表示加载表的顺序是从上到下；id不同，id越大，优先级越高，越先执行
 
-  <img src="/mysql/MySQL.assets/image-20240315214026112.png" alt="image-20240315214026112" style="zoom:80%;" />
+  <img src="/mysql/MySQL.assets/image-20240315214026112-880.webp" srcset="/mysql/MySQL.assets/image-20240315214026112-880.webp 1x, /mysql/MySQL.assets/image-20240315214026112-984.webp 2x" width="880" height="281" data-full-src="/mysql/MySQL.assets/image-20240315214026112.png" alt="image-20240315214026112" style="zoom:80%;"  loading="lazy" decoding="async" />
 
-  <img src="/mysql/MySQL.assets/image-20240315214032473.png" alt="image-20240315214032473" style="zoom:80%;" />
+  <img src="/mysql/MySQL.assets/image-20240315214032473-880.webp" srcset="/mysql/MySQL.assets/image-20240315214032473-880.webp 1x, /mysql/MySQL.assets/image-20240315214032473-890.webp 2x" width="880" height="391" data-full-src="/mysql/MySQL.assets/image-20240315214032473.png" alt="image-20240315214032473" style="zoom:80%;"  loading="lazy" decoding="async" />
 
-  <img src="/mysql/MySQL.assets/image-20240315214111151.png" alt="image-20240315214111151" style="zoom:80%;" />
+  <img src="/mysql/MySQL.assets/image-20240315214111151-880.webp" srcset="/mysql/MySQL.assets/image-20240315214111151-880.webp 1x, /mysql/MySQL.assets/image-20240315214111151-951.webp 2x" width="880" height="185" data-full-src="/mysql/MySQL.assets/image-20240315214111151.png" alt="image-20240315214111151" style="zoom:80%;"  loading="lazy" decoding="async" />
 
 - 索引优化（避免索引失效）
 

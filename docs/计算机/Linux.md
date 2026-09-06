@@ -208,15 +208,15 @@ make directory创建新的目录（文件夹）。参数必填，表示Linux路�
 
 ## 文件编辑vi/vim
 
-<img src="/computer/Linux.assets/image-20240212144305363.png" alt="image-20240212144305363" style="zoom:80%;" />
+<img src="/computer/Linux.assets/image-20240212144305363-880.webp" srcset="/computer/Linux.assets/image-20240212144305363-880.webp 1x, /computer/Linux.assets/image-20240212144305363-913.webp 2x" width="880" height="360" data-full-src="/computer/Linux.assets/image-20240212144305363.png" alt="image-20240212144305363" style="zoom:80%;"  loading="lazy" decoding="async" />
 
 `vim 文件路径`，存在则编辑，不存在则新建
 
 - 常用快捷键
 
-  <img src="/computer/Linux.assets/image-20240212144757024.png" alt="image-20240212144757024" style="zoom:70%;" /><img src="/computer/Linux.assets/image-20240212144807105.png" alt="image-20240212144807105" style="zoom: 80%;" />
+  <img src="/computer/Linux.assets/image-20240212144757024-823.webp" srcset="/computer/Linux.assets/image-20240212144757024-823.webp 1x" width="823" height="350" data-full-src="/computer/Linux.assets/image-20240212144757024.png" alt="image-20240212144757024" style="zoom:70%;"  loading="lazy" decoding="async" /><img src="/computer/Linux.assets/image-20240212144807105-880.webp" srcset="/computer/Linux.assets/image-20240212144807105-880.webp 1x, /computer/Linux.assets/image-20240212144807105-984.webp 2x" width="880" height="337" data-full-src="/computer/Linux.assets/image-20240212144807105.png" alt="image-20240212144807105" style="zoom: 80%;"  loading="lazy" decoding="async" />
 
-  <img src="/computer/Linux.assets/image-20240212144822642.png" alt="image-20240212144822642" style="zoom:80%;" />
+  <img src="/computer/Linux.assets/image-20240212144822642-484.webp" srcset="/computer/Linux.assets/image-20240212144822642-484.webp 1x" width="484" height="254" data-full-src="/computer/Linux.assets/image-20240212144822642.png" alt="image-20240212144822642" style="zoom:80%;"  loading="lazy" decoding="async" />
 
 ## 用户和权限
 
@@ -258,9 +258,9 @@ make directory创建新的目录（文件夹）。参数必填，表示Linux路�
 
 ### 权限信息
 
-<img src="/computer/Linux.assets/image-20240212152030955.png" alt="image-20240212152030955" style="zoom:80%;" />
+<img src="/computer/Linux.assets/image-20240212152030955-623.webp" srcset="/computer/Linux.assets/image-20240212152030955-623.webp 1x" width="623" height="417" data-full-src="/computer/Linux.assets/image-20240212152030955.png" alt="image-20240212152030955" style="zoom:80%;"  loading="lazy" decoding="async" />
 
-<img src="/computer/Linux.assets/image-20240212152136068.png" alt="image-20240212152136068" style="zoom:80%;" />
+<img src="/computer/Linux.assets/image-20240212152136068-827.webp" srcset="/computer/Linux.assets/image-20240212152136068-827.webp 1x" width="827" height="405" data-full-src="/computer/Linux.assets/image-20240212152136068.png" alt="image-20240212152136068" style="zoom:80%;"  loading="lazy" decoding="async" />
 
 - r：读权限
   - 对文件：查看文件内容
@@ -277,8 +277,8 @@ make directory创建新的目录（文件夹）。参数必填，表示Linux路�
 `chmod [-R] 权限 文件或文件夹`，修改文件权限信息
 
 - 选项：-R，对文件夹内的全部内容应用同样的操作
-- 示例：<img src="/computer/Linux.assets/image-20240212153518235.png" alt="image-20240212153518235" style="zoom:67%;" />
-- 简易表示：<img src="/computer/Linux.assets/image-20240212153833606.png" alt="image-20240212153833606" style="zoom:67%;" />
+- 示例：<img src="/computer/Linux.assets/image-20240212153518235-865.webp" srcset="/computer/Linux.assets/image-20240212153518235-865.webp 1x" width="865" height="97" data-full-src="/computer/Linux.assets/image-20240212153518235.png" alt="image-20240212153518235" style="zoom:67%;"  loading="lazy" decoding="async" />
+- 简易表示：<img src="/computer/Linux.assets/image-20240212153833606-849.webp" srcset="/computer/Linux.assets/image-20240212153833606-849.webp 1x" width="849" height="363" data-full-src="/computer/Linux.assets/image-20240212153833606.png" alt="image-20240212153833606" style="zoom:67%;"  loading="lazy" decoding="async" />
 
 ### `chown`命令
 
@@ -331,12 +331,12 @@ make directory创建新的目录（文件夹）。参数必填，表示Linux路�
 
 ## 时间
 
-`date [-d] [+格式化字符串]`，查看系统时间<img src="/computer/Linux.assets/image-20240212160051485.png" alt="image-20240212160051485" style="zoom:80%;" />
+`date [-d] [+格式化字符串]`，查看系统时间<img src="/computer/Linux.assets/image-20240212160051485-651.webp" srcset="/computer/Linux.assets/image-20240212160051485-651.webp 1x" width="651" height="310" data-full-src="/computer/Linux.assets/image-20240212160051485.png" alt="image-20240212160051485" style="zoom:80%;"  loading="lazy" decoding="async" />
 
-例：<img src="/computer/Linux.assets/image-20240212160131152.png" alt="image-20240212160131152" style="zoom:80%;" />
+例：<img src="/computer/Linux.assets/image-20240212160131152-419.webp" srcset="/computer/Linux.assets/image-20240212160131152-419.webp 1x" width="419" height="94" data-full-src="/computer/Linux.assets/image-20240212160131152.png" alt="image-20240212160131152" style="zoom:80%;"  loading="lazy" decoding="async" />
 
-- -d选项：用于时间计算，内容用引号包裹<img src="/computer/Linux.assets/image-20240212160226037.png" alt="image-20240212160226037" style="zoom:80%;" />
-- 修改时区<img src="/computer/Linux.assets/image-20240212160344944.png" alt="image-20240212160344944" style="zoom:80%;" />
+- -d选项：用于时间计算，内容用引号包裹<img src="/computer/Linux.assets/image-20240212160226037-438.webp" srcset="/computer/Linux.assets/image-20240212160226037-438.webp 1x" width="438" height="498" data-full-src="/computer/Linux.assets/image-20240212160226037.png" alt="image-20240212160226037" style="zoom:80%;"  loading="lazy" decoding="async" />
+- 修改时区<img src="/computer/Linux.assets/image-20240212160344944-823.webp" srcset="/computer/Linux.assets/image-20240212160344944-823.webp 1x" width="823" height="114" data-full-src="/computer/Linux.assets/image-20240212160344944.png" alt="image-20240212160344944" style="zoom:80%;"  loading="lazy" decoding="async" />
 
 # Linux网络
 
@@ -376,7 +376,7 @@ make directory创建新的目录（文件夹）。参数必填，表示Linux路�
 
 ## tcp/ip模型
 
-<img src="/computer/Linux.assets/image-20240429233329467.png" alt="image-20240429233329467" style="zoom:80%;" />
+<img src="/computer/Linux.assets/image-20240429233329467-732.webp" srcset="/computer/Linux.assets/image-20240429233329467-732.webp 1x" width="732" height="613" data-full-src="/computer/Linux.assets/image-20240429233329467.png" alt="image-20240429233329467" style="zoom:80%;"  loading="lazy" decoding="async" />
 
 - 物理层：传递二进制电信号的介质。把电脑连接起来的物理手段，常见的有光纤，双绞线，无线波。
 
@@ -403,7 +403,7 @@ make directory创建新的目录（文件夹）。参数必填，表示Linux路�
 
   - IP地址的网络位和主机位：网络位（前三位）是用来标识网段的；主机位（第四位）是用来标识主机的。例192.168.11.0网段包含的主机$2^8$​，但0不能用，255（广播地址）也不能用。
 
-  - IP地址的分类：<img src="/computer/Linux.assets/image-20240501014215190.png" alt="image-20240501014215190" style="zoom:80%;" />
+  - IP地址的分类：<img src="/computer/Linux.assets/image-20240501014215190-840.webp" srcset="/computer/Linux.assets/image-20240501014215190-840.webp 1x" width="840" height="620" data-full-src="/computer/Linux.assets/image-20240501014215190.png" alt="image-20240501014215190" style="zoom:80%;"  loading="lazy" decoding="async" />
 
     私有地址：在ABC类中，仅能在局域网使用
 
@@ -423,7 +423,7 @@ make directory创建新的目录（文件夹）。参数必填，表示Linux路�
 
     and2：	      1 0 0 0 0 0 0 0 = 128
 
-  - 网关：路由器的作用是负责不同网段的数据转发，其每个口都是连通一个网段，一般两个口。<img src="/computer/Linux.assets/image-20240501151527603.png" alt="image-20240501151527603" style="zoom:80%;" />
+  - 网关：路由器的作用是负责不同网段的数据转发，其每个口都是连通一个网段，一般两个口。<img src="/computer/Linux.assets/image-20240501151527603-875.webp" srcset="/computer/Linux.assets/image-20240501151527603-875.webp 1x" width="875" height="130" data-full-src="/computer/Linux.assets/image-20240501151527603.png" alt="image-20240501151527603" style="zoom:80%;"  loading="lazy" decoding="async" />
 
   - arp协议：1. 发一个广播包，包含了 源ip，源Mac地址，目标ip，目标mac？为空。 2. 整个网段的机器都收到了这个消息，解析，检查包里的目标ip是不是跟本机ip相同，不同则丢弃，相同会响应一个包，响应包里包含自己的ip+mac，这个包会以单播发送给源地址，然后存在arp表中。
 
@@ -492,9 +492,9 @@ make directory创建新的目录（文件夹）。参数必填，表示Linux路�
 
 - `route`查看路由表信息；`route -n`不进行dns解析的路由表查看
 
-![image-20240423123251022](/computer/Linux.assets/image-20240423123251022.png)
+<img src="/computer/Linux.assets/image-20240423123251022-553.webp" srcset="/computer/Linux.assets/image-20240423123251022-553.webp 1x" alt="image-20240423123251022" width="553" height="92" loading="lazy" decoding="async" data-full-src="/computer/Linux.assets/image-20240423123251022.png">
 
-![image-20240423123305073](/computer/Linux.assets/image-20240423123305073.png)
+<img src="/computer/Linux.assets/image-20240423123305073-551.webp" srcset="/computer/Linux.assets/image-20240423123305073-551.webp 1x" alt="image-20240423123305073" width="551" height="91" loading="lazy" decoding="async" data-full-src="/computer/Linux.assets/image-20240423123305073.png">
 
 ​	Destination：表示网络号，network的意思
 
@@ -514,7 +514,7 @@ make directory创建新的目录（文件夹）。参数必填，表示Linux路�
 
 是iproute软件包中强大的网络管理工具，ifconfig和route命令的作用，查看系统路由、网络设备，设置策略等功能。
 
-![image-20240423125240099](/computer/Linux.assets/image-20240423125240099.png)
+<img src="/computer/Linux.assets/image-20240423125240099-612.webp" srcset="/computer/Linux.assets/image-20240423125240099-612.webp 1x" alt="image-20240423125240099" width="612" height="213" loading="lazy" decoding="async" data-full-src="/computer/Linux.assets/image-20240423125240099.png">
 
 OBJECT：对象
 
@@ -543,7 +543,7 @@ tunel：IP上的通道
 
 - 查看所有网络连接情况：`netstat -an`，-a 显示所有套接字（socket）信息，-n 显示数值地址信息而非主机名。
 
-![image-20240427162925537](/computer/Linux.assets/image-20240427162925537.png)
+<img src="/computer/Linux.assets/image-20240427162925537-529.webp" srcset="/computer/Linux.assets/image-20240427162925537-529.webp 1x" alt="image-20240427162925537" width="529" height="84" loading="lazy" decoding="async" data-full-src="/computer/Linux.assets/image-20240427162925537.png">
 
 ​	常见字段解释：
 
@@ -573,7 +573,7 @@ tunel：IP上的通道
 
 - 显示所有接口的情况：`netstat -i`
 
-![image-20240427165349485](/computer/Linux.assets/image-20240427165349485.png)
+<img src="/computer/Linux.assets/image-20240427165349485-614.webp" srcset="/computer/Linux.assets/image-20240427165349485-614.webp 1x" alt="image-20240427165349485" width="614" height="87" loading="lazy" decoding="async" data-full-src="/computer/Linux.assets/image-20240427165349485.png">
 
 ​	字段解释：
 
@@ -598,7 +598,7 @@ tunel：IP上的通道
 
 `ping 域名/IP地址` 
 
-![image-20240427171724397](/computer/Linux.assets/image-20240427171724397.png)
+<img src="/computer/Linux.assets/image-20240427171724397-552.webp" srcset="/computer/Linux.assets/image-20240427171724397-552.webp 1x" alt="image-20240427171724397" width="552" height="142" loading="lazy" decoding="async" data-full-src="/computer/Linux.assets/image-20240427171724397.png">
 
 - 会一直刷新ping命令的结果
 - 发送给了远程主机56字节的数据
@@ -606,7 +606,7 @@ tunel：IP上的通道
 
 用于检测主机的网络状态
 
-<img src="/computer/Linux.assets/image-20240427172409862.png" alt="image-20240427172409862" style="zoom:67%;" />
+<img src="/computer/Linux.assets/image-20240427172409862-507.webp" srcset="/computer/Linux.assets/image-20240427172409862-507.webp 1x" width="507" height="44" data-full-src="/computer/Linux.assets/image-20240427172409862.png" alt="image-20240427172409862" style="zoom:67%;"  loading="lazy" decoding="async" />
 
 说明机器无法上网或无法进行dns域名解析（主机名——IP地址）
 

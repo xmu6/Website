@@ -8,12 +8,15 @@
     "docs:dev": "node scripts/fix-locale.js && vitepress dev docs",
     "docs:build": "node scripts/fix-locale.js && node --max-old-space-size=131072 node_modules/vitepress/bin/vitepress.js build docs",
     "docs:preview": "node scripts/fix-locale.js && vitepress preview docs",
-    "postinstall": "node scripts/fix-locale.js"
+    "postinstall": "node scripts/fix-locale.js",
+    "optimize-images": "node scripts/optimize-content-images.js",
+    "optimize-images:dry": "node scripts/optimize-content-images.js --dry-run"
   },
   "devDependencies": {
     "echarts": "^5.6.0",
     "nprogress-v2": "^1.1.10",
     "sass": "^1.89.1",
+    "sharp": "^0.35.4",
     "vitepress": "^1.6.3",
     "vitepress-theme-teek": "^1.4.6"
   },

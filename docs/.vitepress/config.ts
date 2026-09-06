@@ -301,6 +301,24 @@ const teekConfig = defineTeekConfig({
     config: (md) => {
       md.use(timeline); //时间线插件
       md.use(groupIconMdPlugin); // 代码组图标插件
+      // 对裸 HTML <img> 标签补齐懒加载。markdown 图片语法已由 VitePress 的 lazyLoading 处理，
+      // 但正文里直接粘贴的 <img ... style="zoom:xx%"> 不经过 markdown 图片管线，会被当作 eager
+      // 一次性全部请求，导致图片从第一张挨个加载、且无法按当前视窗优先。这里为未声明 loading 的
+      // <img> 补上 loading="lazy" decoding="async"，并保留原有 style 等属性。
+      md.use((md) => {
+        const injectLazy = (html: string) =>
+          html.replace(/<img([^>]*)>/gi, (m, attrs: string) => {
+            if (/loading\s*=/i.test(attrs)) return m;
+            const base = attrs.replace(/\/\s*$/, "").replace(/\s+$/, "");
+            return `<img${base ? base + " " : ""}loading="lazy" decoding="async">`;
+          });
+        const origBlock = md.renderer.rules.html_block;
+        const origInline = md.renderer.rules.html_inline;
+        md.renderer.rules.html_block = (tokens, idx, options, env, self) =>
+          injectLazy(origBlock ? origBlock(tokens, idx, options, env, self) : self.renderToken(tokens, idx, options));
+        md.renderer.rules.html_inline = (tokens, idx, options, env, self) =>
+          injectLazy(origInline ? origInline(tokens, idx, options, env, self) : self.renderToken(tokens, idx, options));
+      });
     },    
     demo: {
       githubUrl: "https://github.com/Kele-Bingtang/vitepress-theme-teek/blob/master/docs",

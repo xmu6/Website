@@ -31,7 +31,7 @@ Ast翻译成中文就是“抽象语法树”的意思。它是一种用于表�
 
 可以将正常代码通过在线AST在线网站（https://astexplorer.net/）进行转换为AST语法树：
 
-![Snipaste_2024-06-11_08-57-44](/ast/imgs/Snipaste_2024-10-16_22-17-22.png)
+<img src="/ast/imgs/Snipaste_2024-10-16_22-17-22-880.webp" srcset="/ast/imgs/Snipaste_2024-10-16_22-17-22-880.webp 1x, /ast/imgs/Snipaste_2024-10-16_22-17-22-1563.webp 2x" alt="Snipaste_2024-06-11_08-57-44" width="880" height="270" loading="lazy" decoding="async" data-full-src="/ast/imgs/Snipaste_2024-10-16_22-17-22.png">
 
 #### Ast部分节点解释
 
@@ -304,7 +304,7 @@ traverse(ast,visitor)
 
 ##### 常用的节点类型
 
-##### ![Snipaste_2024-10-15_21-49-28](/ast/imgs/Snipaste_2024-10-15_21-49-28.png)traverse 指定节点向下遍历
+##### <img src="/ast/imgs/Snipaste_2024-10-15_21-49-28-880.webp" srcset="/ast/imgs/Snipaste_2024-10-15_21-49-28-880.webp 1x, /ast/imgs/Snipaste_2024-10-15_21-49-28-936.webp 2x" alt="Snipaste_2024-10-15_21-49-28" width="880" height="701" loading="lazy" decoding="async" data-full-src="/ast/imgs/Snipaste_2024-10-15_21-49-28.png">traverse 指定节点向下遍历
 
 - traverse 可以指定在任意节点向下遍历,比如遍历到指定函数内部、while循环内部等。
 - 例如，想要把代码中所有函数的第一个参数改为 x
@@ -383,7 +383,7 @@ traverse(ast,visitor)
 
 示例：将当前VariableDeclarator节点下的init下的value属性的属性值替换为 123123
 
- ![Snipaste_2024-06-12_09-24-10](/ast/imgs/Snipaste_2024-06-12_09-24-10.png)
+ <img src="/ast/imgs/Snipaste_2024-06-12_09-24-10-880.webp" srcset="/ast/imgs/Snipaste_2024-06-12_09-24-10-880.webp 1x, /ast/imgs/Snipaste_2024-06-12_09-24-10-1308.webp 2x" alt="Snipaste_2024-06-12_09-24-10" width="880" height="370" loading="lazy" decoding="async" data-full-src="/ast/imgs/Snipaste_2024-06-12_09-24-10.png">
 
 ```js
 // todo 编写ast插件
@@ -402,7 +402,7 @@ replaceWith：该方法是节点替换节点。例如：将所有数字型变量
 
 数字变量的节点类型NumericLiteral。
 
-![Snipaste_2024-06-12_09-28-44](/ast/imgs/Snipaste_2024-06-12_09-28-44.png)
+<img src="/ast/imgs/Snipaste_2024-06-12_09-28-44-845.webp" srcset="/ast/imgs/Snipaste_2024-06-12_09-28-44-845.webp 1x" alt="Snipaste_2024-06-12_09-28-44" width="845" height="332" loading="lazy" decoding="async" data-full-src="/ast/imgs/Snipaste_2024-06-12_09-28-44.png">
 
 ```js
 // todo 编写ast插件
@@ -609,7 +609,7 @@ const visitor = {
 traverse(ast,visitor)
 ```
 
-<img src="/ast/imgs/Snipaste_2024-06-13_09-15-24.png" alt="Snipaste_2024-06-13_09-15-24" style="zoom:75%;" />
+<img src="/ast/imgs/Snipaste_2024-06-13_09-15-24-679.webp" srcset="/ast/imgs/Snipaste_2024-06-13_09-15-24-679.webp 1x" width="679" height="540" data-full-src="/ast/imgs/Snipaste_2024-06-13_09-15-24.png" alt="Snipaste_2024-06-13_09-15-24" style="zoom:75%;"  loading="lazy" decoding="async" />
 
 ##### scope.traverse
 
@@ -862,7 +862,7 @@ EXACT:https://static.geetest.com/static/js/slide.7.9.2.js
 ```
 
 然后，刷新一下网页，查看js文件是否已经被替换成你想替换的内容，并做相应的测试；刷新后fiddler替换js文件如果失败，可如下操作，网页端谷歌开发者工具勾选Network>Disable cache；以防浏览器里面有js源文件的缓存，可能导致fiddler替换js文件失败；
-![Snipaste_2024-06-12_16-35-40](/ast/imgs/Snipaste_2024-06-12_16-35-40.png)
+<img src="/ast/imgs/Snipaste_2024-06-12_16-35-40-821.webp" srcset="/ast/imgs/Snipaste_2024-06-12_16-35-40-821.webp 1x" alt="Snipaste_2024-06-12_16-35-40" width="821" height="155" loading="lazy" decoding="async" data-full-src="/ast/imgs/Snipaste_2024-06-12_16-35-40.png">
 
 #### 重复引用赋值反混淆
 
@@ -879,7 +879,7 @@ var e = this[$_BGHER(37)];
 
 查看分析上述代码的ast结构：
 
-<img src="/ast/imgs/Snipaste_2024-06-13_15-29-25.png" alt="Snipaste_2024-06-13_15-29-25" style="zoom:75%;" />
+<img src="/ast/imgs/Snipaste_2024-06-13_15-29-25-682.webp" srcset="/ast/imgs/Snipaste_2024-06-13_15-29-25-682.webp 1x" width="682" height="398" data-full-src="/ast/imgs/Snipaste_2024-06-13_15-29-25.png" alt="Snipaste_2024-06-13_15-29-25" style="zoom:75%;"  loading="lazy" decoding="async" />
 
 上述代码分别对应了ast中三种不同类型的节点，分别是变量节点1，函数调用节点和变量节点2。
 
@@ -889,7 +889,7 @@ var e = this[$_BGHER(37)];
 
 变量“节点2”的ast结构展开后：
 
-<img src="/ast/imgs/Snipaste_2024-06-13_15-45-06.png" alt="Snipaste_2024-06-13_15-45-06" style="zoom:75%;" />
+<img src="/ast/imgs/Snipaste_2024-06-13_15-45-06-560.webp" srcset="/ast/imgs/Snipaste_2024-06-13_15-45-06-560.webp 1x" width="560" height="350" data-full-src="/ast/imgs/Snipaste_2024-06-13_15-45-06.png" alt="Snipaste_2024-06-13_15-45-06" style="zoom:75%;"  loading="lazy" decoding="async" />
 
 ##### 前置知识点
 
@@ -931,7 +931,7 @@ var e = this[$_BGHER(37)];
 
 
 
-<img src="/ast/imgs/Snipaste_2024-06-13_16-16-58.png" alt="Snipaste_2024-06-13_16-16-58" style="zoom:55%;" />
+<img src="/ast/imgs/Snipaste_2024-06-13_16-16-58-766.webp" srcset="/ast/imgs/Snipaste_2024-06-13_16-16-58-766.webp 1x" width="766" height="434" data-full-src="/ast/imgs/Snipaste_2024-06-13_16-16-58.png" alt="Snipaste_2024-06-13_16-16-58" style="zoom:55%;"  loading="lazy" decoding="async" />
 
 ```js
 function func_replace(path){
@@ -971,7 +971,7 @@ var e = this[$_BGHER(37)];
 
 
 
-<img src="/ast/imgs/Snipaste_2024-06-13_19-29-44.png" alt="Snipaste_2024-06-13_19-29-44" style="zoom:55%;" />
+<img src="/ast/imgs/Snipaste_2024-06-13_19-29-44-480.webp" srcset="/ast/imgs/Snipaste_2024-06-13_19-29-44-480.webp 1x" width="480" height="426" data-full-src="/ast/imgs/Snipaste_2024-06-13_19-29-44.png" alt="Snipaste_2024-06-13_19-29-44" style="zoom:55%;"  loading="lazy" decoding="async" />
 
 ```js
 function func_replaces(path){
@@ -1008,7 +1008,7 @@ traverse(ast,{VariableDeclarator:func_replaces,})
 
 将带数字参数的函数返回的字符串替换该函数的调用。
 
-<img src="/ast/imgs/Snipaste_2024-06-13_19-49-14.png" alt="Snipaste_2024-06-13_19-49-14" style="zoom:75%;" />
+<img src="/ast/imgs/Snipaste_2024-06-13_19-49-14-461.webp" srcset="/ast/imgs/Snipaste_2024-06-13_19-49-14-461.webp 1x" width="461" height="51" data-full-src="/ast/imgs/Snipaste_2024-06-13_19-49-14.png" alt="Snipaste_2024-06-13_19-49-14" style="zoom:75%;"  loading="lazy" decoding="async" />
 
 此时，所有带数字的函数名都被上一步修改为了“mwbxQ.$_Cg”，因此，$\_BGHFG(517)就已经变为了mwbxQ.$\_Cg(517)。
 
@@ -1021,7 +1021,7 @@ mwbxQ.$_Cg = function() {
 }
 ```
 
-<img src="/ast/imgs/Snipaste_2024-06-13_20-17-43.png" alt="Snipaste_2024-06-13_20-17-43" style="zoom:75%;" />
+<img src="/ast/imgs/Snipaste_2024-06-13_20-17-43-880.webp" srcset="/ast/imgs/Snipaste_2024-06-13_20-17-43-880.webp 1x, /ast/imgs/Snipaste_2024-06-13_20-17-43-1542.webp 2x" width="880" height="247" data-full-src="/ast/imgs/Snipaste_2024-06-13_20-17-43.png" alt="Snipaste_2024-06-13_20-17-43" style="zoom:75%;"  loading="lazy" decoding="async" />
 
 js测试代码：可以使用slide.js文件里所有的js源码。
 

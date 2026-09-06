@@ -61,7 +61,7 @@ redis={
 
 `strlen key`：获取字符串长度
 
-比特流操作<img src="/redis/redis.assets/image-20240212170044959.png" alt="image-20240212170044959"  />
+比特流操作<img src="/redis/redis.assets/image-20240212170044959-540.webp" srcset="/redis/redis.assets/image-20240212170044959-540.webp 1x" width="540" height="282" data-full-src="/redis/redis.assets/image-20240212170044959.png" alt="image-20240212170044959"   loading="lazy" decoding="async" />
 
 例：a→97→01100001比特操作变为01100010→98→b。用处：签到系统
 
@@ -192,7 +192,7 @@ field3: value3,
 
 `flushall`：清除键
 
-`ttl key`：查看键有效期<img src="/redis/redis.assets/image-20240212174053224.png" alt="image-20240212174053224" style="zoom:80%;" />
+`ttl key`：查看键有效期<img src="/redis/redis.assets/image-20240212174053224-456.webp" srcset="/redis/redis.assets/image-20240212174053224-456.webp 1x" width="456" height="77" data-full-src="/redis/redis.assets/image-20240212174053224.png" alt="image-20240212174053224" style="zoom:80%;"  loading="lazy" decoding="async" />
 
 `expire key time`：设置有效期
 

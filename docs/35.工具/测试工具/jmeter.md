@@ -58,7 +58,7 @@ jdk的安装以及环境变量的配置：
 
 基本架构
 
-![QQ_1721659802871](/test-tools/jmeter/QQ_1721659802871.png)
+<img src="/test-tools/jmeter/QQ_1721659802871-322.webp" srcset="/test-tools/jmeter/QQ_1721659802871-322.webp 1x" alt="QQ_1721659802871" width="322" height="143" loading="lazy" decoding="async" data-full-src="/test-tools/jmeter/QQ_1721659802871.png">
 
 - 组件的作用域：组件可以作用于**父组件**、**平级兄弟组件**、**平级兄弟组件之下的子组件**。
 
@@ -68,7 +68,7 @@ jdk的安装以及环境变量的配置：
 
 - json path
 
-<img src="/test-tools/jmeter/QQ_1721745126537.png" alt="QQ_1721745126537"  />
+<img src="/test-tools/jmeter/QQ_1721745126537-880.webp" srcset="/test-tools/jmeter/QQ_1721745126537-880.webp 1x, /test-tools/jmeter/QQ_1721745126537-1313.webp 2x" width="880" height="137" data-full-src="/test-tools/jmeter/QQ_1721745126537.png" alt="QQ_1721745126537"   loading="lazy" decoding="async" />
 
 表达式取值：`$.access_token`  ->  $表示根节点，.取子节点的值。
 

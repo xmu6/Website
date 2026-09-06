@@ -69,9 +69,11 @@ class ImageViewer {
         event.stopPropagation();
 
         this.collectImages();
-        this.currentIndex = this.imgList.findIndex(src => src === img.src);
+        // 优先使用 data-full-src（原始分辨率），否则回退到 src（优化后的 1x）
+        const fullSrc = img.dataset.fullSrc || img.src;
+        this.currentIndex = this.imgList.findIndex(src => src === fullSrc);
 
-        this.createViewer(img.src);
+        this.createViewer(fullSrc);
     }
 
     // 只收集内容区域中的图片
@@ -81,7 +83,8 @@ class ImageViewer {
         if (vpDocElement) {
             const images = vpDocElement.querySelectorAll("img:not(.tk-image-viewer__canvas img)");
             images.forEach(img => {
-                this.imgList.push((img as HTMLImageElement).src);
+                const htmlImg = img as HTMLImageElement;
+                this.imgList.push(htmlImg.dataset.fullSrc || htmlImg.src);
             });
         }
     }
