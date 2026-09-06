@@ -2,6 +2,8 @@
 export const Nav = [
     { text: "🏡首页", link: "/" },
     { text: "📚文档", items: [
+        { text: "AI", link: "/categories?category=AI" },
+        { text: "Python", link: "/categories?category=Python" },
         { text: "测试", link: "/categories?category=测试" },
         { text: "计算机", link: "/categories?category=计算机" },
         { text: "数据库", link: "/categories?category=数据库" },

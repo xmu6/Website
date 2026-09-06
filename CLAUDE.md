@@ -43,6 +43,12 @@ The top-level folders map to URL prefixes through the `useTransformByRules` rule
 | `55.兴趣` | `/xingqu/$uuid5` |
 | `60.关于` | `/about/$uuid5` |
 | `65.Teek` | `/teek/$uuid5` |
+| `测试` | `/test/$uuid5` |
+| `计算机` | `/computer/$uuid5` |
+| `数据库` | `/database/$uuid5` |
+| `爬虫` | `/crawler/$uuid5` |
+| `Python` | `/python/$uuid5` |
+| `AI` | `/ai/$uuid5` |
 
 `$uuid5` is replaced at build time with a random 5-char string (see `docs/.vitepress/theme/composables/useTransform.ts`), so routes like `/linux/linux-index` or `/about/me` are stable while raw paths are obfuscated. Add a new mapping here when adding a new top-level content category.
 

@@ -554,6 +554,8 @@ export default defineConfig({
                   { folderName: "计算机", prefix: "/computer/$uuid5", removeLevel: 99}, // 清空前缀并且添加前缀使用随机数
                   { folderName: "数据库", prefix: "/database/$uuid5", removeLevel: 99}, // 清空前缀并且添加前缀使用随机数
                   { folderName: "爬虫", prefix: "/crawler/$uuid5", removeLevel: 99}, // 清空前缀并且添加前缀使用随机数
+                  { folderName: "Python", prefix: "/python/$uuid5", removeLevel: 99}, // 清空前缀并且添加前缀使用随机数
+                  { folderName: "AI", prefix: "/ai/$uuid5", removeLevel: 99}, // 清空前缀并且添加前缀使用随机数
                   // { folderName: "40.专题/10.博客搭建/45.静态站点构建器", prefix: "/zhuanti/$uuid5", removeLevel: 99}, // 清空前缀并且添加前缀使用随机数
                   // { folderName: "40.专题/10.博客搭建/45.静态站点构建器", prefix: "/zhuanti", clear: true }, // 清空前缀并且添加前缀使用随机数
               ];
